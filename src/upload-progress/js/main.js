@@ -37,6 +37,7 @@
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4 && xhr.status == 200){
+                alert("Upload Successfully !");
                 console.log(xhr.responseText);
             }
         }

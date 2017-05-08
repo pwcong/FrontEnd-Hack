@@ -19,7 +19,7 @@ body{
 .content{
     box-shadow: 0 0 10px 0;
     background-color: white;
-    width: 600px;
+    width: 400px;
     height: 400px;
 
     display: flex;
@@ -37,12 +37,16 @@ body{
     justify-content: center;
 }
 
-.row img{
-    width: 400px;
+.row #img{
+    width: 100%;
     height: 250px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .ipt {
+    width: 50%;
     position: relative;
     text-decoration: none;
     text-align: center;
@@ -70,6 +74,7 @@ body{
 }
 
 #btn-upload{
+    width: 50%;
     outline: none;
     cursor: pointer;
     font-size: 18px;
@@ -89,7 +94,7 @@ body{
 
 #progress{
     height: 20px;
-    width: 80%;
+    width: 100%;
     border: 1px grey solid;
 }
 

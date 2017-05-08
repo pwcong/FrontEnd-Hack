@@ -11,13 +11,19 @@
 
     var progressBar = document.getElementById("progress-bar");
 
+    var reader = new FileReader();
+
+    reader.onload = function(e){
+        img.style.backgroundImage = "url(" + e.target.result + ")";
+    }
+
 
     // 监听输入文件变化，动态加载图片
     fileInput.onchange = function(e){
 
         var file = e.target.files[0];
 
-        img.src = window.URL.createObjectURL(file);
+        reader.readAsDataURL(file);
 
     }
 

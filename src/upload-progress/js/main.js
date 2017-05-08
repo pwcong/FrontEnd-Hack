@@ -30,36 +30,41 @@
         // 获取输入文件
         var file = fileInput.files[0];
 
-        // 新建表单对象，并置入读取的文件
-        var formData = new FormData();
-        formData.append("smfile", file);
+        if(file != null){
 
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState == 4 && xhr.status == 200){
-                alert("Upload Successfully !");
-                console.log(xhr.responseText);
+            // 新建表单对象，并置入读取的文件
+            var formData = new FormData();
+            formData.append("smfile", file);
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    alert("Upload successfully!");
+                    console.log(xhr.responseText);
+                }
             }
+
+            // 监听上传进度
+            xhr.upload.onprogress = function(e){
+
+                // 已上传大小
+                var loaded = e.loaded;
+                // 总大小
+                var total = e.total;
+
+                // 通过计算 已上传大小/总大小 得出进度值
+                var percent = 100 * loaded / total;
+
+                progressBar.style.width = percent + "%";
+
+            }
+
+            
+            xhr.open("post", uploadURL);
+            xhr.send(formData);
+        }else{
+            alert("You have not selected file.")
         }
-
-        // 监听上传进度
-        xhr.upload.onprogress = function(e){
-
-            // 已上传大小
-            var loaded = e.loaded;
-            // 总大小
-            var total = e.total;
-
-            // 通过计算 已上传大小/总大小 得出进度值
-            var percent = 100 * loaded / total;
-
-            progressBar.style.width = percent + "%";
-
-        }
-
-        
-        xhr.open("post", uploadURL);
-        xhr.send(formData);
 
     }
 

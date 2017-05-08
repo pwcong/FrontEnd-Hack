@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Upload Progress</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    
-        <div class="container">
 
-            <div class="content">
+<head>
+    <title>Upload Progress</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
 
-                <div class="row">
-                    <img src="" alt="" id="img">
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="row">
+                <img src="" alt="" id="img">
+            </div>
+
+            <div class="row">
+                <div id="progress">
+                    <div id="progress-bar" style="width: 0%"></div>
                 </div>
+            </div>
 
-                <div class="row">
-                    <div id="progress">
-                        <div id="progress-bar" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="row">
+            <div class="row">
+                <a class="ipt" href="javascript:;">
                     <input id="ipt-file" type="file">
-                    <button id="btn-upload">Upload</button>
-                </div>
-
+                    Select
+                </a>
+                <button id="btn-upload">Upload</button>
             </div>
 
         </div>
 
-        <script src="./js/main.js"></script>
+    </div>
 
-    </body>
+    <script src="./js/main.js"></script>
+
+</body>
+
 </html>

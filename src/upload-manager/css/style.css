@@ -15,15 +15,159 @@ body{
 
 }
 
-.main{
+#manager{
+
+    min-width: 400px;
 
     width: 80%;
-    height: 60%;
+    height: 80%;
 
-    border: 1px grey solid;
 
-    box-sizing: border-box;
-
-    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
 
 }
+
+#manager-window{
+    flex: 1;
+    width: 100%;
+
+    border: 1px #ccc solid;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    margin-bottom: 8px;
+}
+
+#manager-window-tips{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    color: #ccc;
+
+    padding: 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#manager-window-list{
+
+    flex: 1;
+    width: 100%;
+    border: 1px #666 dashed;
+    border-radius: 4px;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+#manager-tools{
+
+    height: 48px;
+    width: 100%;
+
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+}
+
+
+#manager-tools-progress{
+    border: 1px #ccc solid;
+    transition: border 0.4s;
+    flex: 1;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 4px 8px;
+}
+#manager-tools-progress:hover{
+    border: 1px #2c3e50 solid;
+}
+
+#manager-tools-progress-bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: -999;
+
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    height: 100%;
+    width: 20%;
+
+    background-color: #ccc; 
+}
+
+#manager-tools-progress-tips{
+    color: #2c3e50;
+}
+
+
+#manager-tools-btns{
+    height: 100%;
+    display: flex;
+}
+
+#manager-tools-btns .button{
+    height: 100%;
+    width: 72px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+#btn-browser{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #2c3e50;
+}
+
+#btn-browser:hover{
+    background-color: #3d4f61;
+}
+
+#btn-browser:active{
+    background-color: #1b2d40;
+}
+
+#btn-upload{
+    background-color: orangered;
+}
+
+#btn-upload:hover{
+    background-color: #ff5611;
+}
+
+#btn-upload:active{
+    background-color: #ee3400;
+
+}
+

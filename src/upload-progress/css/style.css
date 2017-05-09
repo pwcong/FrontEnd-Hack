@@ -58,7 +58,7 @@ body{
     font-size: 18px;
     padding: 8px;
     color: white;
-    background-color: orange;
+    background-color: orangered;
     transition: background-color 0.3s;
 }
 .ipt input#ipt-file {
@@ -70,11 +70,11 @@ body{
     opacity: 0;
 }
 .ipt:hover {
-    background-color: orangered;
+    background-color: #ff5611;
 }
 
 .ipt:active{
-    background-color: orangered;
+    background-color: #ee3400;
 
 }
 
@@ -85,15 +85,15 @@ body{
     font-size: 18px;
     border: none;
     color: white;
-    background-color: #00BFFF;
+    background-color: #00a6de;
     transition: background-color 0.3s;
 }
 #btn-upload:hover{
-    background-color: #00A6DE;
+    background-color: #00bfff;
 
 }
 #btn-upload:active{
-    background-color: #00A6DE;
+    background-color: #0095cd;
 
 }
 

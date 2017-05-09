@@ -36,6 +36,10 @@ body{
     border-radius: 4px;
 
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+
     padding: 16px;
 
     display: flex;
@@ -57,10 +61,18 @@ body{
 
     padding: 16px;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #manager-window-list{
@@ -69,6 +81,13 @@ body{
     width: 100%;
     border: 1px #666 dashed;
     border-radius: 4px;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+
+    padding: 8px;
 
     display: flex;
     flex-flow: row wrap;
@@ -102,6 +121,10 @@ body{
     align-items: center;
 
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+
     padding: 4px 8px;
 }
 #manager-tools-progress:hover{
@@ -119,8 +142,7 @@ body{
     border-bottom-left-radius: 4px;
 
     height: 100%;
-    width: 20%;
-
+    width: 0%;
     background-color: #ccc; 
 }
 
@@ -137,11 +159,30 @@ body{
 #manager-tools-btns .button{
     height: 100%;
     width: 72px;
-    outline: none;
-    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: white;
     cursor: pointer;
     transition: background-color 0.4s;
+
+    position: relative;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#input-file{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 
 #btn-browser{

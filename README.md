@@ -1,10 +1,14 @@
 # FrontEnd-Hack
-前端 Hack
+Front-End Hack
 
-## List
-|Title             |Describtion                    |Demo                                                             |
-|------------------|-------------------------------|-----------------------------------------------------------------|
-|上传进度           |显示文件上传进度                |[点击查看](http://pwcong.me/FrontEnd-Hack/src/upload-progress)    |
-|文件上传管理窗口   |管理上传文件                    |未完成                                                            |
-|轮播图            |轮播Banner                      |未完成                                                            |
-|BiliBili侧栏      |动态显示当前位置，可调整版面顺序  |未完成                                                            |
+## Hack List
+|Title            |Describtion                         |Demo                                                          |
+|-----------------|------------------------------------|--------------------------------------------------------------|
+|Upload Progress  |Display the progress when uploading |[Preview](http://pwcong.me/FrontEnd-Hack/src/upload-progress) |
+|Drag & Drop      |Read the file by Drag & Drop        |[Preview](http://pwcong.me/FrontEnd-Hack/src/drag-and-drop)   |
+|Upload Manager   |Manage uploaded files               |In the rough                                                  |
+|Loop Banner      |Loop display banners                |In the rough                                                  |
+|BiliBili SideBar |The powerful sidebar                |In the rough                                                  |
+
+## Member
+* Pwcong

@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Upload Manager</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../pub/css/normalize.min.css">
-        <link href="./css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    
-        <div class="container">
 
-            <div id="manager">
-                <div id="manager-window">
-                    <div id="manager-window-list">
+<head>
+    <title>Upload Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../pub/css/normalize.min.css">
+    <link rel="stylesheet" href="../../pub/css/font-awesome.min.css">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
 
-                        
+<body>
 
+    <div class="container">
 
-                    </div>
-                    <div id="manager-window-tips">
-                        <h1>Drag & drop files here</h1>
-                    </div>
-                </div>
-                <div id="manager-tools">
-                    <div id="manager-tools-progress">
-                        <div id="manager-tools-progress-bar"></div>
-                        <div id="manager-tools-progress-tips"></div>
-                    </div>
-                    <div id="manager-tools-btns">
-                        <div class="button" id="btn-upload">Upload</div>
-                        <div class="button" id="btn-browser">
-                            Browser
-                            <input id="input-file" type="file" multiple="multiple">
+        <div class="manager">
+            <div class="manager-window">
+                <div class="manager-window-list" id="manager-window-list">
+
+                    <script type="text/html" id="manager-window-list-item">
+                        <div class="manager-window-list-item-img">
+                            <img src="../../pub/imgs/RemHoom.jpg" alt="">
                         </div>
+
+                        <div class="manager-window-list-item-tools">
+                            <span class="fa fa-upload"></span>
+                            <span class="fa fa-check" style="display: none;"></span>
+                            <span class="fa fa-spinner" style="display: none;"></span>
+                            <span class="fa fa-trash"></span>
+                        </div>
+
+                        <div class="manager-window-list-item-progress" style="display: none;">
+                            <div class="manager-window-list-item-progress-bar"></div>
+                        </div>
+                    </script>
+
+
+                </div>
+                <div id="manager-window-tips" class="manager-window-tips">
+                    <h1>Drag & drop files here</h1>
+                </div>
+            </div>
+            <div class="manager-tools">
+                <div class="manager-tools-msg">
+                    <div class="manager-tools-msg-tips" id="manager-tools-progress-tips"></div>
+                </div>
+                <div class="manager-tools-btns">
+                    <div class="manager-tools-button" id="manager-tools-btn-upload" style="display: none;">
+                        Upload
+                    </div>
+                    <div class="manager-tools-button" id="manager-tools-btn-browser">
+                        Browser
+                        <input id="manager-tools-input-file" type="file" multiple="multiple">
                     </div>
                 </div>
             </div>
-
         </div>
 
+    </div>
 
-    </body>
+    <script src="./js/main.js"></script>
+
+
+</body>
+
 </html>

@@ -15,7 +15,7 @@ body{
 
 }
 
-#manager{
+.manager{
 
     min-width: 400px;
 
@@ -28,7 +28,7 @@ body{
 
 }
 
-#manager-window{
+.manager-window{
     flex: 1;
     width: 100%;
 
@@ -50,7 +50,7 @@ body{
     margin-bottom: 8px;
 }
 
-#manager-window-tips{
+.manager-window-tips{
     position: absolute;
     left: 0;
     top: 0;
@@ -73,9 +73,13 @@ body{
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+    z-index: -999;
 }
 
-#manager-window-list{
+.manager-window-list{
+
+    background-color: transparent;
 
     flex: 1;
     width: 100%;
@@ -86,6 +90,10 @@ body{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    
+    overflow: auto;
+
+    transition: background-color 0.4s;
 
     padding: 8px;
 
@@ -93,12 +101,102 @@ body{
     flex-flow: row wrap;
 }
 
+.manager-window-list-item{
 
-#manager-tools{
+    background-color: white;
+
+    height: 212px;
+
+    border: 1px #ccc solid;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+
+    padding: 4px;
+
+    margin: 4px;
+    
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 0 0;
+
+    transition: box-shadow 0.4s;
+
+}
+
+.manager-window-list-item:hover{
+    box-shadow: 0 0 5px 0 #2c3e50;
+}
+
+.manager-window-list-item-img{
+    height: 164px;
+    width: 100%;
+}
+
+.manager-window-list-item-img img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.manager-window-list-item-progress{
+    width: 100%;
+    height: 4px;
+
+    position: relative;
+}
+
+.manager-window-list-item-progress-bar{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: dodgerblue;
+}
+
+.manager-window-list-item-tools{
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.manager-window-list-item-tools span{
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+.manager-window-list-item-tools span.fa-check{
+    color: deepskyblue;
+}
+
+.manager-window-list-item-tools span.fa-trash{
+    color: orangered;
+}
+
+.manager-window-list-item-tools span.fa-spinner{
+    cursor: wait;
+
+    animation: rotation 1s infinite linear;
+    -webkit-animation: rotation 1s infinite linear;
+    -moz-animation: rotation 1s infinite linear;
+    -ms-animation: rotation 1s infinite linear;
+}
+
+
+.manager-tools{
 
     height: 48px;
     width: 100%;
-
 
     display: flex;
     align-items: center;
@@ -107,7 +205,7 @@ body{
 }
 
 
-#manager-tools-progress{
+.manager-tools-msg{
     border: 1px #ccc solid;
     transition: border 0.4s;
     flex: 1;
@@ -127,36 +225,22 @@ body{
 
     padding: 4px 8px;
 }
-#manager-tools-progress:hover{
+
+.manager-tools-msg:hover{
     border: 1px #2c3e50 solid;
 }
 
-#manager-tools-progress-bar{
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    z-index: -999;
-
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-
-    height: 100%;
-    width: 0%;
-    background-color: #ccc; 
-}
-
-#manager-tools-progress-tips{
+.manager-tools-msg-tips{
     color: #2c3e50;
 }
 
 
-#manager-tools-btns{
+.manager-tools-btns{
     height: 100%;
     display: flex;
 }
 
-#manager-tools-btns .button{
+.manager-tools-btns .manager-tools-button{
     height: 100%;
     width: 72px;
 
@@ -176,7 +260,7 @@ body{
     -ms-user-select: none;
 }
 
-#input-file{
+#manager-tools-input-file{
     position: absolute;
     left: 0;
     top: 0;
@@ -185,30 +269,39 @@ body{
     opacity: 0;
 }
 
-#btn-browser{
+#manager-tools-btn-browser{
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     background-color: #2c3e50;
 }
 
-#btn-browser:hover{
+#manager-tools-btn-browser:hover{
     background-color: #3d4f61;
 }
 
-#btn-browser:active{
+#manager-tools-btn-browser:active{
     background-color: #1b2d40;
 }
 
-#btn-upload{
+#manager-tools-btn-upload{
     background-color: orangered;
 }
 
-#btn-upload:hover{
+#manager-tools-btn-upload:hover{
     background-color: #ff5611;
 }
 
-#btn-upload:active{
+#manager-tools-btn-upload:active{
     background-color: #ee3400;
 
 }
 
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}

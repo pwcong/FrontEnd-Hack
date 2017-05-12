@@ -8,6 +8,7 @@ Front-End Hack
 |Drag & Drop      |Read the file by Drag & Drop        |[Preview](http://pwcong.me/FrontEnd-Hack/src/drag-and-drop)   |
 |Upload Manager   |Manage uploaded files               |[Preview](http://pwcong.me/FrontEnd-Hack/src/upload-manager)  |
 |Loop Banner      |Loop display banners                |[Preview](http://pwcong.me/FrontEnd-Hack/src/loop-banner)     |
+|Loop Indicatoin  |Loop display indications            |[Preview](http://pwcong.me/FrontEnd-Hack/src/loop-indication) |
 |BiliBili SideBar |The powerful sidebar                |In the rough                                                  |
 
 ## Member

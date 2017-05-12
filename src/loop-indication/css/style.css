@@ -1,0 +1,54 @@
+.container{
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #333;
+
+}
+
+.indication{
+
+    padding: 4px;
+
+    display: flex;
+    align-items: center;
+}
+
+.indication div{
+    width: 14px;
+    height: 14px;
+
+    background-color: rgba(255,255,255,0);
+
+    border-radius: 50%;
+    border: 1px grey solid;
+    margin: 4px;
+
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+
+    cursor: pointer;
+
+}
+
+.indication div.active{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.indication div:hover{
+    background-color: rgba(255,255,255,1);
+}
+
+.indication div:active{
+    background-color: rgba(228, 228, 228, 1);
+}

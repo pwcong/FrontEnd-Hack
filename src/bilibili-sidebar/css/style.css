@@ -1,0 +1,146 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container{
+
+    width: 100%;
+
+
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    padding-right: 350px;
+
+    position: relative;
+
+}
+
+.content{
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content .seg{
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+
+}
+
+.sidebar{
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 350px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sidebar-main{
+    width: 50px;
+    max-height: 95%;
+    border: 1px #ccc solid;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    background-color: #eee;
+
+}
+
+.sidebar-main-list{
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar-main-list-item{
+    width: 100%;
+    height: 35px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s;
+
+    user-select: none;
+}
+
+.sidebar-main-list-item:hover{
+    background-color: dodgerblue;
+}
+
+.sidebar-main-list-item:active{
+    background-color: #0d80ee;
+}
+
+.sidebar-main-action{
+
+    border-top: 1px #ccc solid;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    font-size: 13px;
+
+    padding: 8px;
+
+    transition: background-color 0.3s;
+
+    user-select: none;
+
+}
+
+.sidebar-main-action span{
+    transform: rotate(90deg);
+    font-size: 20px;
+    margin: 4px;
+}
+
+.sidebar-main-action:hover{
+    background-color: dodgerblue;
+}
+.sidebar-main-action:active{
+    background-color: #0d80ee;
+}
+
+

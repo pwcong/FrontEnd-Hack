@@ -11,9 +11,9 @@
                 -ms-box-sizing: border-box;\
                 -moz-box-sizing: border-box;\
                 -webkit-box-sizing: border-box;\
-                padding: 8px;\
-                border-radius: 4px;\
-                background-color: rgba(0, 0, 0, 0.6);\
+                padding: 10px 8px;\
+                border-radius: 2px;\
+                background-color: rgba(0, 0, 0, 0.7);\
                 color: white;\
                 font-size: 12px;\
                 position: fixed;\
@@ -23,7 +23,7 @@
                 position: fixed;\
                 border-left: 4px solid transparent;\
                 border-right: 4px solid transparent;\
-                opacity: 0.6;\
+                opacity: 0.7;\
             }\
             .popup .triangle-down{\
                 border-top: 5px solid black;\

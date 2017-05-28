@@ -1,0 +1,43 @@
+.container{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-flow: row wrap;
+
+    justify-content: space-around;
+
+}
+
+.block{
+    
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+
+    cursor: default;
+
+    padding: 8px;
+
+    margin: 8px;
+
+    border: 1px solid rgba(0, 0, 0, 0.6) ;
+
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.block:hover{
+
+    color: white;
+    background-color: darkcyan;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+}
+

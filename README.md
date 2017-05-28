@@ -10,9 +10,12 @@ Front-End Hack
 |Loop Banner                |Loop display banners                |[Preview](http://pwcong.me/FrontEnd-Hack/src/loop-banner)     |
 |Loop Indicatoin            |Loop display indications            |[Preview](http://pwcong.me/FrontEnd-Hack/src/loop-indication) |
 |BiliBili SideBar           |The powerful sidebar                |[Preview](http://pwcong.me/FrontEnd-Hack/src/bilibili-sidebar)|
+|Popup                      |A popup displays information on top of a page |[Preview](http://pwcong.me/FrontEnd-Hack/src/popup)|
+|Header Navigator           |Header Navigator                    |In the rough                                                  |
 |Github Contribution Graph  |The contribution graph of Github    |In the rough                                                  |
 |Zhihu Topbar               |The Topbar of Zhihu                 |In the rough                                                  |
 |Back To Top                |The button that help scroll to top  |In the rough                                                  |
+
 
 ## Member
 * Pwcong

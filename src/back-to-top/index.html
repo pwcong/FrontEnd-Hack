@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Back To Top</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="./js/back-to-top.js"></script>
+        <script src="../block-generator/js/block-generator.js"></script>
+    </head>
+    <body>
+
+        <div class="container"></div>
+        
+
+        <script>
+            var container = document.getElementsByClassName("container")[0];
+
+            generateRandomColorBlock(container, 20, function(block, index){
+                block.style.height = "200px";
+            });
+
+            initBackToTop();
+        
+        </script>
+    
+    </body>
+</html>

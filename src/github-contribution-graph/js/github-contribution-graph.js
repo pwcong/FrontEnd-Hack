@@ -1,5 +1,7 @@
 ;(function(global){
 
+    'use strict';
+
     var defaultColor = '#ebedf0';
     var defaultSize = 10;
     var defaultSpacing = 2;

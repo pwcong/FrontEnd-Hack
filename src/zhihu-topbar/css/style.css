@@ -1,0 +1,247 @@
+body{
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+.header{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    height: 52px;
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: white;
+
+    box-shadow: 0 0 3px 0 #aaa;
+
+}
+
+.header-page .header-item{
+    transform: translateY(-100%);
+}
+
+.header-item{
+
+    height: 100%;
+    
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    transform: translateY(0%);
+
+    transition: transform 0.3s;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+
+}
+
+.header-item-span{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+}
+
+.header-item-span ul{
+    list-style: none;
+    
+    font-size: 15px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.header-item-span ul li{
+    float: left;
+    text-decoration-style: none;
+    padding: 16px;
+}
+
+.header-item-span ul li a{
+    color: #8590a6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.header-item-span ul li a:hover{
+    color: dodgerblue;
+    
+}
+
+.header-searchbar{
+    width: 370px;
+    position: relative;
+}
+
+.header-searchbar-input{
+    position: relative;
+    width: 300px;
+
+    transition: width 0.3s;
+}
+
+.header-searchbar input{
+    width: 100%;
+    height: 34px;
+    outline: none;
+    border: 1px solid #e7eaf1;
+    background-color: #f7f8fa;
+
+    padding-left: 8px;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    border-radius: 2px;
+
+    transition: background-color 0.3s, border 0.3s;
+
+}
+
+.header-searchbar-input-btn{
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    top: 0;
+    right: 0;
+
+    color: #8590a6;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: color 0.3s;
+}
+
+.header-searchbar-action{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-searchbar-action-btn{
+
+    font-size: 14px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #1f99fc;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 2px;
+
+    transition: height 0.3s, width 0.3s, background-color 0.3s, font-size 0.3s;
+}
+
+.header-searchbar-action-btn:hover{
+    background-color: #0f88eb;
+
+}
+.header-searchbar-active .header-searchbar-action-btn{
+    font-size: 0px;
+    width: 0%;
+    height: 0%;
+}
+
+.header-searchbar-active .header-searchbar-input{
+    width: 100%;
+}
+
+.header-searchbar-active input{
+    background-color: white;
+    border: 1px solid #9fadc7;
+}
+
+.header-searchbar-active .header-searchbar-input-btn{
+    color: #0f88eb;
+}
+
+.header-menu li{
+    font-size: 20px;
+}
+
+.header-btn{
+
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    border: 1px solid #0f88eb;
+    height: 70%;
+
+    font-size: 14px;
+
+    border-radius: 2px;
+
+    margin: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    padding: 0 8px;
+}
+
+.container{
+    margin-top: 52px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.article{
+    width: 800px;
+}
+
+.section{
+    height: 100px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

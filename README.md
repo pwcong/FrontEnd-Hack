@@ -12,8 +12,8 @@ Front-End Hack
 |BiliBili SideBar           |The powerful sidebar                          |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/bilibili-sidebar)          |
 |Popup                      |A popup displays information on top of a page |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/popup)                     |
 |Github Contribution Graph  |The contribution graph of Github              |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/github-contribution-graph) |
+|Zhihu Topbar               |The Topbar of Zhihu                           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/zhihu-topbar)              |
 |Header Navigator           |Header Navigator                              |In the rough                                                                    |
-|Zhihu Topbar               |The Topbar of Zhihu                           |In the rough                                                                    |
 |Back To Top                |The button that help scroll to top            |In the rough                                                                    |
 
 

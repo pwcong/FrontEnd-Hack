@@ -33,6 +33,23 @@ function initSection(){
 
 }
 
+function initHeaderSearchBar(){
+
+    var headerSearchBar = document.getElementsByClassName("header-searchbar")[0];
+    var headerSearchBarInput = document.getElementById("header-searchbar-input");
+
+    headerSearchBarInput.onfocus = function(e){
+        headerSearchBar.className = "header-searchbar header-searchbar-active";
+    }
+
+    headerSearchBarInput.onblur = function(e){
+        headerSearchBar.className = "header-searchbar";
+
+    }
+    
+
+}
+
 function initHeader(){
 
     var header = document.getElementsByClassName("header")[0];
@@ -54,6 +71,7 @@ function initHeader(){
 function initView(){
 
     initHeader();
+    initHeaderSearchBar();
     initSection();
 
 

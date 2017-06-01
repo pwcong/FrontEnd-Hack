@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="../block-generator/js/block-generator.js"></script>
+        <script src="./js/scrollTopTo.js"></script>
+    </head>
+    <body>
+    
+        <div class="container"></div>
+
+        <div id="btn">
+            Scroll Top To 0
+        </div>
+
+        <script>
+
+            var container = document.getElementsByClassName("container")[0];
+
+            generateRandomColorBlock(container, 20, function(block, index){
+
+                block.style.height = "200px";
+
+            });
+
+            var btn = document.getElementById("btn");
+            btn.onclick = function(e){
+
+                scrollTopTo(container, 0, 0.1, 10);
+
+            }
+        
+        </script>
+
+    </body>
+</html>

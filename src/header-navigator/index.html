@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Header Navigator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="./js/header-navigator.js"></script>
+        <script src="../block-generator/js/block-generator.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+
+
+        </div>
+
+        <div class="sidebar"></div>
+
+        <script>
+        
+            var nodes = [];
+
+            var container = document.getElementsByClassName("container")[0];
+            generateRandomColorBlock(container, 6, function(block, index){
+                
+                var node = generateNavigationNode("H-" + index, block, []);
+                nodes.push(node);
+
+                block.innerHTML = "H-" + index;
+                
+
+                generateRandomColorBlock(block, 3, function(subBlock, subIndex){
+
+                    var subNode = generateNavigationNode("H-" + index + "-" + subIndex, subBlock, []);
+                    node.children.push(subNode);
+
+                    subBlock.style.height = "400px";
+                    subBlock.innerHTML = "H-" + index + "-" + subIndex;
+
+                });
+
+            });
+
+            var sidebar = document.getElementsByClassName("sidebar")[0];
+            initHeaderNavigator(document.body, sidebar, nodes);
+
+        </script>
+
+
+    </body>
+</html>

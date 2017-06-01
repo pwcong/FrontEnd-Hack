@@ -14,7 +14,6 @@
             }, timeout);
         }
         
-        console.log("ok");
 
     }
 

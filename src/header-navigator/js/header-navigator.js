@@ -93,7 +93,7 @@
                     }
 
                     li.onclick = function(e){
-                        root.scrollTop = relativeTop;
+                        scrollTopTo(root, relativeTop, 0.1, 10);
                         console.log(relativeTop)
                     }
                 }

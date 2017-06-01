@@ -4,14 +4,17 @@
 
     function scrollTopTo(elem, to, speed, timeout){
 
-        if(elem.scrollTop - to - (elem.scrollTop - to) * speed < 1){
+
+        if(Math.abs(elem.scrollTop - to) < 10){
             elem.scrollTop = to;
         }else{
             setTimeout(function() {
-                elem.scrollTop -= (elem.scrollTop - to) * speed;
+                elem.scrollTop += (to - elem.scrollTop) * speed;
                 scrollTopTo(elem, to, speed, timeout);
             }, timeout);
         }
+        
+        console.log("ok");
 
     }
 

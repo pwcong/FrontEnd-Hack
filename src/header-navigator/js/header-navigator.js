@@ -93,8 +93,15 @@
                     }
 
                     li.onclick = function(e){
+                        
                         scrollTopTo(root, relativeTop, 0.1, 10);
                         console.log(relativeTop)
+
+                        if (e.stopPropagation) {        //W3C 
+                            e.stopPropagation(); 
+                        }else {       //IE      
+                            e.cancelBubble = true; 
+                        }
                     }
                 }
 

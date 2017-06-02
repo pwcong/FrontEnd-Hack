@@ -36,9 +36,17 @@
                     var subNode = generateNavigationNode("H-" + index + "-" + subIndex, subBlock, []);
                     node.children.push(subNode);
 
-                    subBlock.style.height = "400px";
                     subBlock.innerHTML = "H-" + index + "-" + subIndex;
 
+                    generateRandomColorBlock(subBlock, 2, function(b, bi){
+
+                        var bn = generateNavigationNode("H-" + index + "-" + subIndex + "-" + bi, b, []);
+                        subNode.children.push(bn);
+
+                        b.innerHTML = "H-" + index + "-" + subIndex + "-" + bi;
+                        b.style.height = "400px";
+                        
+                    });
                 });
 
             });

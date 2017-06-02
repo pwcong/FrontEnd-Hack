@@ -32,6 +32,35 @@
 
         var style = document.createElement("style");
 
+        style.innerHTML = "\
+            .header-navigator{\
+            }\
+            .header-navigator-list{\
+                cursor: pointer;\
+            }\
+            .header-navigator-list ol{\
+                padding-left: 24px;\
+            }\
+            .header-navigator-list > span{\
+                color: #333;\
+                border-bottom: 1px solid #aaa;\
+                transition: color 0.3s;\
+            }\
+            .header-navigator-list:hover > span{\
+                color: #fc6423;\
+                border-bottom: 1px solid #fc6423;\
+            }\
+            .header-navigator-list-on > span{\
+                color: #fc6423;\
+                border-bottom: 1px solid #fc6423;\
+            }\
+            .header-navigator-list > ol{\
+                display: none;\
+            }\
+            .header-navigator-list-on > ol{\
+                display: block;\
+            }"
+
         document.head.appendChild(style);
 
     }
@@ -95,12 +124,14 @@
                     li.onclick = function(e){
                         
                         scrollTopTo(root, relativeTop, 0.1, 10);
-                        console.log(relativeTop)
 
-                        if (e.stopPropagation) {        //W3C 
-                            e.stopPropagation(); 
-                        }else {       //IE      
-                            e.cancelBubble = true; 
+                        if (e.stopPropagation){
+
+                            e.stopPropagation();
+                        }else{
+                            
+                            e.cancelBubble = true;
+                            
                         }
                     }
                 }
@@ -135,7 +166,12 @@
     }
 
     function initHeaderNavigator(root, el, nodes){
-        handleNodes(root, el, nodes);
+
+        var headerNavigator = document.createElement("div");
+        headerNavigator.className = "header-navigator";
+        el.appendChild(headerNavigator);
+
+        handleNodes(root, headerNavigator, nodes);
 
     }
 

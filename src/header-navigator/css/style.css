@@ -23,35 +23,3 @@ body{
     border: 1px solid green;
 }
 
-
-.header-navigator-list{
-    cursor: pointer;
-}
-
-.header-navigator-list > span{
-    color: #333;
-
-    transition: color 0.3s;
-}
-
-.header-navigator-list:hover > span{
-    color: #fc6423;
-}
-
-.header-navigator-list-on > span{
-    color: #fc6423;
-}
-
-
-
-.header-navigator-list > ol{
-    display: none;    
-}
-
-
-.header-navigator-list-on > ol{
-    display: block;
-}
-
-
-

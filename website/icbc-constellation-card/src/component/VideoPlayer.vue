@@ -25,13 +25,12 @@
 
 .video-controller{
     position: relative;
-
+    overflow: hidden;
 }
 .video-controller video{
 
     max-width: 100%;
     min-width: 100%;
-
 }
 
 .video-controller-action{

@@ -1,12 +1,14 @@
 <template>
     <div class="container">
+        <div class="tips">
+            <div>手机浏览效果更佳</div>
+        </div>
         <swiper :options="swiperOption" class="my-swiper-container">
             <swiper-slide >
                 <div class="swiper-wrapper-detail">
                     <section>
                         <video-player 
-                            :src="firstVideoURL" 
-                            :autoplay="true"
+                            :src="firstVideoURL"
                             :loop="true"
                             :style="{
                                 width: '100%'
@@ -56,6 +58,14 @@
 
                         </div>
 
+                        <flipper 
+                            :style="{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
+                                width: '100%',
+                            }"/>
+
                     </section>
                 </div>
             </swiper-slide>
@@ -75,6 +85,7 @@
                     <section
                         :style="{
                             height: '60%',
+                            overflow: 'hidden'
                         }">
                         <swiper
                             :options="secondSwiperOption" 
@@ -82,6 +93,7 @@
                             <swiper-slide v-for="bannerImg in bannerImgs" :key="bannerImg">
                                 <img
                                     :style="{
+                                        minWidth: '100%',
                                         maxWidth: '100%',
                                         backgroundRepeat: 'no-repeat',
                                         backgroundSize: 'cover',
@@ -101,6 +113,13 @@
                             <p>每一个梦想，都独一无二。</p>
                         </div>
 
+                        <flipper 
+                            :style="{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
+                                width: '100%',
+                            }"/>
                     </section>
                 </div>
             </swiper-slide>
@@ -108,12 +127,14 @@
                 <div class="swiper-wrapper-detail">
                     <section
                         :style="{
-                            height: '60%'
+                            height: '60%',
+                            overflow: 'hidden'
                         }">
                         <img
                             :style="{
                                 backgroundRepeat: 'norepear',
                                 backgroundSize: 'cover',
+                                minWidth: '100%',
                                 maxWidth: '100%'
                             }" 
                             :src="endImg"/>
@@ -168,6 +189,7 @@
 .my-swiper-container{
     height: 100%;
     width: 100%;
+    visibility: hidden;
 }
 
 
@@ -185,7 +207,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    overflow: hidden;
 }
 
 .my-swiper-container-horizontal{
@@ -202,11 +224,49 @@
     background: white;
 }
 
+.tips{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -999;
+    visibility: visible;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tips div{
+
+    
+    background-color: white;
+    padding: 48px;
+    border-radius: 4px;
+
+}
+
+@media screen and (max-width: 1000px){
+    .my-swiper-container{
+        visibility: visible;
+    }
+
+    .tips{
+        visibility: hidden;
+    }
+}
+
 </style>
 <script>
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import VideoPlayer from "../component/VideoPlayer.vue";
+import Flipper from "../component/Flipper.vue";
 
 export default {
 
@@ -240,7 +300,8 @@ export default {
     components: {
         swiper,
         swiperSlide,
-        VideoPlayer
+        VideoPlayer,
+        Flipper
     }
 
 

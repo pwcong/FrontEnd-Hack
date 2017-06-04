@@ -64,7 +64,7 @@
     top: 0;
     height: 60px;
     width: 100%;
-
+    z-index: 999;
 }
 
 .nav-header a{
@@ -77,7 +77,7 @@
     top: -100%;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #222;
 
     transition: top 0.1s;
     transition-delay: 0.1s;
@@ -156,7 +156,7 @@
 
 .nav-header-categories-detail{
 
-    background-color: #222;
+    background-color: #111;
 
     z-index: -200;
 
@@ -165,14 +165,16 @@
     top: -1000px;
 
     width: 100%;
-    
+    max-height: 0px;
 
-    transition: top 0.3s;
-    transition-delay: 0.1s;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease 0.3s, top 0.2s;
 
 }
 
 .nav-header-categories-list li:hover .nav-header-categories-detail{
+    max-height: 100%;
     top: 100%;
 }
 
@@ -193,7 +195,7 @@
 
     cursor: pointer;
 
-    transition: color 0.3s;
+    transition: color 0.1s;
 }
 
 .nav-header-operation span.fa{

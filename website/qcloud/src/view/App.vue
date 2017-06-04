@@ -2,6 +2,10 @@
 
 <div>
     <nav-header/>
+    <banner 
+        :style="{
+            height: '500px'
+        }"/>
 </div>
 
 </template>
@@ -12,7 +16,8 @@
 
 <script>
 
-import NavHeader from './NavHeader.vue';
+import NavHeader from "../component/NavHeader.vue";
+import Banner from "../component/Banner.vue";
 
 export default {
 
@@ -22,7 +27,8 @@ export default {
         }
     },
     components: {
-        NavHeader
+        NavHeader,
+        Banner
     }
 }
 </script>

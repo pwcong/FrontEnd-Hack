@@ -26,6 +26,7 @@ Front-End Hack
 |Title                    |Describtion                                   |Demo                                                                                 |
 |-------------------------|----------------------------------------------|-------------------------------------------------------------------------------------|
 |ICBC Constellation Card  |ICBC Constellation Card                       |[Preview](https://pwcong.github.io/FrontEnd-Hack/website/icbc-constellation-card)    |
+|QCloud                   |QCloud                                        |[Preview](https://pwcong.github.io/FrontEnd-Hack/website/qcloud)                     |
 |...                      |...                                           |...                                                                                  |
 
 

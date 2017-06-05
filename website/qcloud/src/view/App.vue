@@ -6,6 +6,7 @@
         :style="{
             height: '500px'
         }"/>
+    <below-banner/>
 </div>
 
 </template>
@@ -18,6 +19,7 @@
 
 import NavHeader from "../component/NavHeader.vue";
 import Banner from "../component/Banner.vue";
+import BelowBanner from "../component/BelowBanner.vue";
 
 export default {
 
@@ -28,7 +30,8 @@ export default {
     },
     components: {
         NavHeader,
-        Banner
+        Banner,
+        BelowBanner
     }
 }
 </script>

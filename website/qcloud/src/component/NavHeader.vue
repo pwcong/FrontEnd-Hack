@@ -156,27 +156,35 @@
 
 .nav-header-categories-detail{
 
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #111;
 
     z-index: -200;
 
+    height: 300px;
+
     position: absolute;
     left: 0;
-    top: -1000px;
+    top: 100%;
 
     width: 100%;
     max-height: 0px;
 
     overflow: hidden;
 
-    transition: max-height 0.3s ease 0.3s, top 0.2s;
+    transition: max-height 0.3s ease 0.3s, visibility 0.2s;
 
 }
 
 .nav-header-categories-list li:hover .nav-header-categories-detail{
     max-height: 100%;
-    top: 100%;
+    visibility: visible;
 }
+
 
 .nav-header-operation{
 

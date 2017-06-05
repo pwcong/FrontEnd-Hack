@@ -28,7 +28,7 @@
 </style>
 <script>
 
-import BelowBannerItem from './BelowBannerItem.vue';
+import BelowBannerItem from '../component/BelowBannerItem.vue';
 
 export default {
 

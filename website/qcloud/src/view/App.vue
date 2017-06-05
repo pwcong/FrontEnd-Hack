@@ -7,6 +7,7 @@
             height: '500px'
         }"/>
     <below-banner/>
+    <hover-list/>
 </div>
 
 </template>
@@ -17,10 +18,10 @@
 
 <script>
 
-import NavHeader from "../component/NavHeader.vue";
-import Banner from "../component/Banner.vue";
-import BelowBanner from "../component/BelowBanner.vue";
-
+import NavHeader from "./NavHeader.vue";
+import Banner from "./Banner.vue";
+import BelowBanner from "./BelowBanner.vue";
+import HoverList from "./HoverList.vue"
 export default {
 
     data(){
@@ -31,7 +32,9 @@ export default {
     components: {
         NavHeader,
         Banner,
-        BelowBanner
+        BelowBanner,
+        HoverList
+
     }
 }
 </script>

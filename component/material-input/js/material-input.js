@@ -56,7 +56,13 @@
         
         initStyle();
 
+        var sourceEvent = window.onload;
+
         window.onload = function(e){
+
+            if(sourceEvent){
+                sourceEvent(e);
+            }
 
             var materialInputDivs = document.getElementsByClassName("material-input");
 

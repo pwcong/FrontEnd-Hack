@@ -7,7 +7,7 @@
             height: '500px'
         }"/>
     <below-banner/>
-    <hover-list/>
+    <product-list/>
 </div>
 
 </template>
@@ -21,7 +21,9 @@
 import NavHeader from "./NavHeader.vue";
 import Banner from "./Banner.vue";
 import BelowBanner from "./BelowBanner.vue";
-import HoverList from "./HoverList.vue"
+import ProductList from "./ProductList.vue";
+
+
 export default {
 
     data(){
@@ -33,7 +35,7 @@ export default {
         NavHeader,
         Banner,
         BelowBanner,
-        HoverList
+        ProductList
 
     }
 }

@@ -1,11 +1,11 @@
 <template>
     <div 
-        class="hover-list"
+        class="product-list"
         :style="{
             backgroundImage: 'url(' + bg + ')'
         }">
 
-        <div class="hover-list-desc">
+        <div class="product-list-desc">
             <p
                 :style="{
                     color: '#333',
@@ -17,14 +17,14 @@
                     fontSize: '18px'
                 }">存储、计算、监控、安全...你所需要的一切云产品，腾讯云均能以业界领先的水平为你提供</p>
         </div>
-        <div class="hover-list-main">
-
+        <div class="product-list-main">
+            <detail-displayer/>
         </div>
 
     </div>
 </template>
 <style>
-.hover-list{
+.product-list{
 
     background-size: cover;
     background-position-x: 50%;
@@ -42,22 +42,27 @@
 
 }
 
-.hover-list-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.product-list-main{
+    width: 100%;
+    height: 500px;
 
 }
 
 
 </style>
 <script>
+
+import DetailDisplayer from "../component/DetailDisplayer.vue";
+
 export default {
 
     data(){
         return {
             bg: './imgs/mod_bg.png'
         }
+    },
+    components: {
+        DetailDisplayer
     }
   
 }

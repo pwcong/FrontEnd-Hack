@@ -5,17 +5,20 @@
             v-for="item in items" 
             :class="{
                 'detail-displayer-item': true,
-                'detail-displayer-item-border-right': item.hasBorderRight
-            }"  
+                'detail-displayer-item-border-right': item.hasBorderRight,
+                'detail-displayer-item-active': item.isActive
+            }"
+            :has-border-right="item.hasBorderRight"
+            @mouseenter="handleDetialDisplayerItemEnter"
             :key="item.key">
             <detail-item>
 
                 <div slot="detail-item-simple" style="text-align: center;">
-                    <img :src="item.icon_1" style="width: 50px; height: 50px; margin-top: 16px;"/>
+                    <img :src="item.icon_1" style="width: 30px; height: 30px; margin-top: 16px;"/>
                 </div>
 
                 <div slot="detail-item-rich" style="text-align: center;">
-                    <img :src="item.icon_2" style="width: 50px; height: 50px; margin-top: 16px;"/>
+                    <img :src="item.icon_2" style="width: 30px; height: 30px; margin-top: 16px;"/>
                 </div>
 
             </detail-item>
@@ -54,7 +57,7 @@
     border-right: 1px solid #ccc;
 }
 
-.detail-displayer-item:hover{
+.detail-displayer-item-active{
     border-top: 4px solid #0087fb;
     border-bottom: 1px solid #0087fb;
     border-left: 1px solid #0087fb;
@@ -63,7 +66,6 @@
     flex: 2;
 
     height: 100%;
-    
 }
 
 
@@ -75,15 +77,39 @@ import DetailItem from "./DetailItem.vue";
 
 export default {
 
+    props: {
+        items: {
+            type: Array,
+            default: []
+        }
+    },
     data(){
         return {
-            items: [
-                {key: "detail-item-1", hasBorderRight: true, icon_1: "./imgs/pd_1.png", icon_2: "./imgs/pd_1_.png"},
-                {key: "detail-item-2", hasBorderRight: true, icon_1: "./imgs/pd_2.png", icon_2: "./imgs/pd_2_.png"},
-                {key: "detail-item-3", hasBorderRight: true, icon_1: "./imgs/pd_3.png", icon_2: "./imgs/pd_3_.png"},
-                {key: "detail-item-4", hasBorderRight: true, icon_1: "./imgs/pd_4.png", icon_2: "./imgs/pd_4_.png"},
-                {key: "detail-item-5", hasBorderRight: false, icon_1: "./imgs/pd_5.png", icon_2: "./imgs/pd_5_.png"}
-            ]
+
+        }
+    },
+    methods: {
+        handleDetialDisplayerItemEnter(e){
+
+            let detailDisplayerItems = document.getElementsByClassName("detail-displayer-item");
+
+            for(let i = 0; i < detailDisplayerItems.length; i++){
+                if(detailDisplayerItems[i].getAttribute("has-border-right")){
+
+                    detailDisplayerItems[i].className = "detail-displayer-item detail-displayer-item-border-right";
+                }else{
+
+                    detailDisplayerItems[i].className = "detail-displayer-item";
+                }
+            }
+
+            if(e.target.getAttribute("has-border-right")){
+                e.target.className = "detail-displayer-item detail-displayer-item-border-right detail-displayer-item-active";
+            }else{
+
+                e.target.className = "detail-displayer-item detail-displayer-item-active";
+            }
+
         }
     },
     components: {

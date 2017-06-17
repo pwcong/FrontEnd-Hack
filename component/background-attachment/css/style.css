@@ -1,0 +1,33 @@
+header{
+    height: 60px;
+    background-color: deepskyblue;
+    text-align: center;
+    color: white;
+}
+
+section{
+    height: 600px;
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+}
+
+footer{
+    height: 40px;
+    background-color: #333;
+    text-align: center;
+    color: white;
+}
+
+.bg-attachment{
+
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    background-image: url('../imgs/bg.jpg');
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}

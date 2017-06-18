@@ -21,6 +21,8 @@ Front-End Hack
 |Header Navigator           |Header Navigator                              |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/header-navigator)          |
 |Material Input             |Material Input                                |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/material-input)            |
 |Responsive Header          |Responsive Header                             |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/responsive-header)         |
+|Background Attachment      |Background Attachment                         |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/background-attachment)     |
+|Volume Regulator           |Interesting Volume Regulator                  |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/volume-regulator)          |
 |...                        |...                                           |...                                                                                   |
 
 

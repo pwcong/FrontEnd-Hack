@@ -4,8 +4,8 @@ Front-End Hack
 ## Hack List
 
 ### Components
-|Title                      |Describtion                                   |Demo                                                                                  |
-|---------------------------|------------- -------------|------------------------------------------------------------------------------------|
+|Title                      |Describtion               |Demo                                                                                 |
+|---------------------------|--------------------------|-------------------------------------------------------------------------------------|
 |Upload Progress            |显示上传进度实例            |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/upload-progress)          |
 |Drag & Drop                |读取拖拽的文件信息实例      |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/drag-and-drop)             |
 |Upload Manager             |文件管理窗口               |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/upload-manager)            |
@@ -27,7 +27,7 @@ Front-End Hack
 
 
 ### Websites
-|Title                    |Describtion                                   |Demo                                                                                 |
+|Title                    |Describtion                    |Demo                                                                                 |
 |-------------------------|-------------------------------|-------------------------------------------------------------------------------------|
 |ICBC Constellation Card  |微信端ICBC星座卡宣传页面         |[Preview](https://pwcong.github.io/FrontEnd-Hack/website/icbc-constellation-card)    |
 |QCloud                   |腾讯云官网首页                  |[Preview](https://pwcong.github.io/FrontEnd-Hack/website/qcloud)                     |

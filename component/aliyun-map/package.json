@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
     "gulp-postcss": "^7.0.0",
     "postcss": "^6.0.8",
     "postcss-cssnext": "^3.0.2"

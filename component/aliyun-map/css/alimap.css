@@ -1,0 +1,132 @@
+.alimap{
+
+    position: relative;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.alimap-point{
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+}
+
+.alimap-point-dot{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 12px;
+    height: 12px;
+    background-color: #6ad7e9;
+
+    border-radius: 50%;
+
+    white-space: nowrap;
+
+    line-height: 12px;
+
+    font-size: 14px;
+
+}
+
+.alimap-point-dot span{
+    margin-left: 14px;
+}
+
+.alimap-point-ring{
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+
+    border: 1px solid #6ad7e9;
+
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    animation: anim-alimap-point-ring 3s infinite ease;
+}
+
+.alimap-point-ring-100{
+    animation-delay: 100ms;
+}
+.alimap-point-ring-200{
+    animation-delay: 200ms;
+}
+.alimap-point-ring-300{
+    animation-delay: 300ms;
+}
+.alimap-point-ring-400{
+    animation-delay: 400ms;
+}
+.alimap-point-ring-500{
+    animation-delay: 500ms;
+}
+.alimap-point-ring-600{
+    animation-delay: 600ms;
+}
+.alimap-point-ring-700{
+    animation-delay: 700ms;
+}
+.alimap-point-ring-800{
+    animation-delay: 800ms;
+}
+.alimap-point-ring-900{
+    animation-delay: 900ms;
+}
+.alimap-point-ring-1000{
+    animation-delay: 1000ms;
+}
+.alimap-point-ring-1100{
+    animation-delay: 1100ms;
+}
+.alimap-point-ring-1200{
+    animation-delay: 1200ms;
+}
+.alimap-point-ring-1300{
+    animation-delay: 1300ms;
+}
+.alimap-point-ring-1400{
+    animation-delay: 1400ms;
+}
+.alimap-point-ring-1500{
+    animation-delay: 1500ms;
+}
+
+
+@keyframes anim-alimap-point-ring{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0.1);
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+}

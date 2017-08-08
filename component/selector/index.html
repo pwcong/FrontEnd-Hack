@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>Selector</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/selector.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="selector">
+
+                <span class="selector-value">1</span>
+                <div class="selector-options">
+                    <div class="selector-option">
+                        1
+                    </div>
+                    <div class="selector-option">
+                        2
+                    </div>
+                    <div class="selector-option">
+                        3
+                    </div>
+                    <div class="selector-option">
+                        4
+                    </div>
+                </div>
+                <span class="selector-icon"><</span>
+            </div>
+
+            <div class="selector">
+
+                <span class="selector-value">1</span>
+                <div class="selector-options">
+                    <div class="selector-option">
+                        1
+                    </div>
+                    <div class="selector-option">
+                        2
+                    </div>
+                    <div class="selector-option">
+                        3
+                    </div>
+                    <div class="selector-option">
+                        4
+                    </div>
+                </div>
+                <span class="selector-icon"><</span>
+            </div>
+
+            <div class="selector">
+
+                <span class="selector-value">1</span>
+                <div class="selector-options">
+                    <div class="selector-option">
+                        1
+                    </div>
+                    <div class="selector-option">
+                        2
+                    </div>
+                    <div class="selector-option">
+                        3
+                    </div>
+                    <div class="selector-option">
+                        4
+                    </div>
+                </div>
+                <span class="selector-icon"><</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        
+        var selectors = document.body.getElementsByClassName("selector");
+
+        function handleSelectorClick(selector){
+
+            selector.onclick = function(e){
+
+                if(!selector.active){
+                    selector.className = "selector selector-active";
+                    selector.active = true;
+                }else{
+                    selector.className = "selector";
+                    selector.active = false;
+                }
+
+                if(e.target.className === "selector-option"){
+                    selector.getElementsByClassName("selector-value")[0].innerHTML = e.target.innerHTML;
+                }
+
+            }
+
+        }
+
+
+        for(var i = 0; i < selectors.length; i++){
+
+            handleSelectorClick(selectors[i]);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

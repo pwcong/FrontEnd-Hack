@@ -1,0 +1,23 @@
+body,html{
+    position: relative;
+    margin: 0;
+
+    background-color: #f5f5f5;
+
+}
+
+.container{
+    width:  100%;
+    margin-top: 200px;
+
+    text-align: center;
+}
+
+.row{
+    
+    display: inline-block;
+
+    text-align: initial;
+
+}
+

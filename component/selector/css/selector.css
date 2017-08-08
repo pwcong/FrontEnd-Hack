@@ -1,0 +1,88 @@
+.selector{
+    display: inline-block;
+
+    position: relative;
+
+    border: 1px solid #aaa;
+
+    transition: border 0.3s;
+
+    cursor: pointer;
+
+    min-width: 48px;
+
+    height: 24px;
+    line-height: 24px;
+
+    background-color: white;
+
+}
+
+.selector-value{
+    margin-left: 4px;
+    margin-right: 24px;
+}
+
+
+.selector:hover{
+
+    border: 1px solid #333;
+
+}
+
+.selector-options{
+
+    position: absolute;
+    left: -1px;
+    top: 100%;
+
+    width: 100%;
+
+    border: 1px solid #333;
+
+    background-color: white;
+
+    overflow: auto;
+
+    height: 0;
+
+    max-height: 120px;
+
+
+}
+
+.selector-option{
+    text-align: center;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.selector-option:hover{
+    background-color: #333;
+    color: white;
+
+}
+
+.selector-icon{
+
+    text-align: center;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 24px;
+    height: 100%;
+
+    transition: transform 0.3s;
+
+    user-select: none;
+}
+
+
+.selector-active .selector-icon{
+    transform: rotate(-90deg);
+}
+.selector-active .selector-options{
+    height: auto;
+}

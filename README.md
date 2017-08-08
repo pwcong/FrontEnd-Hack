@@ -1,5 +1,5 @@
 # FrontEnd-Hack
-Front-End Hack
+本人总结的前端组件库。
 
 ## Hack List
 
@@ -25,6 +25,7 @@ Front-End Hack
 |Volume Slider              |有趣的音量调节器           |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/volume-slider)             |
 |Aliyun Map                 |阿里云地图                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/aliyun-map)                |
 |CSS Triangle               |CSS三角形                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/css-triangle)               |
+|IE Checker                 |检测IE浏览器版本           |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/ie-checker)                |
 |...                        |...                       |...                                                                                   |
 
 

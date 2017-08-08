@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/iechecker.js"></script>
+
+    </head>
+
+    <body>
+    
+        <div class="container">
+
+            <div id="tips"></div>
+
+
+        </div>
+
+        <script>
+
+            var tips = document.getElementById("tips");
+
+            var IEVersion = checkIEBrowser();
+
+            if(IEVersion > 0){
+
+                tips.innerHTML = "你的IE浏览器版本为：" + IEVersion;
+
+            }else{
+
+                tips.innerHTML = "你的浏览器不是IE浏览器";
+
+            }
+
+        </script>
+
+    </body>
+</html>

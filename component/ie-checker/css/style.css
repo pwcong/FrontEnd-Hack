@@ -1,0 +1,31 @@
+html,
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+#tips {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 500px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    background-color: #666;
+    border-radius: 16px;
+    border: 2px solid white;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
+}
+
+#tips:hover {
+    background-color: white;
+    color: #666;
+    border: 2px solid #666;
+}

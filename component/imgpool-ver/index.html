@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>IMG Pool - Verticle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/imgpool-ver.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="imgpool">
+
+        </div>
+
+    </div>
+    <div class="action">
+        <button type="button" id="btn">ADD IMG</button>
+    </div>
+
+    <script>
+        var imgs = [{
+                link: "#",
+                url: "../../pub/imgs/1.jpg"
+            },
+            {
+                link: "#",
+                url: "../../pub/imgs/2.jpg"
+            },
+            {
+                link: "#",
+                url: "../../pub/imgs/3.jpg"
+            },
+            {
+                link: "#",
+                url: "../../pub/imgs/4.jpg"
+            },
+            {
+                link: "#",
+                url: "../../pub/imgs/5.jpg"
+            },
+            {
+                link: "#",
+                url: "../../pub/imgs/6.jpg"
+            }
+        ];
+
+        var imgPool = initIMGPool(document.getElementById("imgpool"), 4);
+
+        document.getElementById("btn").onclick = function(e){
+
+            imgPool.pushIMG(imgs[Math.round(Math.random() * (imgs.length - 1))]);
+
+        }
+
+        setInterval(function(){
+
+            imgPool.pushIMG(imgs[Math.round(Math.random() * (imgs.length - 1))]);
+
+        },1000);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -27,6 +27,8 @@
 |CSS Triangle               |CSS三角形                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/css-triangle)               |
 |IE Checker                 |检测IE浏览器版本           |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/ie-checker)                |
 |Selector                   |DIV实现Selector功能        |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/selector)                |
+|Before-After               |使用before和after伪元素    |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/before-after)                |
+|IMGPool - Verticle         |纵向图片瀑布流             |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/imgpool-ver)                |
 |...                        |...                       |...                                                                                   |
 
 

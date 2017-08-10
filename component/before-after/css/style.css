@@ -1,0 +1,74 @@
+html,
+body {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.row{
+    width: 100%;
+    text-align: center;
+
+    font-size: 24px;
+
+    padding: 16px 0;
+    
+}
+
+.ba-1::before {
+    content: "before-";
+}
+
+.ba-1::after {
+    content: "-after";
+}
+
+.ba-2{
+
+    position: relative;
+
+    display: inline-block;
+    padding: 16px 24px;
+
+}
+
+.ba-2::before,
+.ba-2::after{
+
+    content: " ";
+
+    position: absolute;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #333;
+
+    transition: transform 0.3s, top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+
+}
+
+.ba-2::before{
+    top: 0;
+    left: 0;
+}
+.ba-2::after{
+    bottom: 0;
+    right: 0;
+}
+
+.ba-2:hover::before{
+
+    transform: rotate(90deg);
+    top: -50%;
+    left: 50%;
+
+}
+.ba-2:hover::after{
+    transform: rotate(90deg);
+    bottom: -50%;
+    right: 50%;
+}

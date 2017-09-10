@@ -29,6 +29,7 @@
 |Selector                   |DIV实现Selector功能        |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/selector)                |
 |Before-After               |使用before和after伪元素    |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/before-after)                |
 |IMGPool - Verticle         |纵向图片瀑布流             |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/imgpool-ver)                |
+|Scroll Number              |滚动数字                   |[Preview](https://pwcong.github.io/FrontEnd-Hack/component/scrollnumber)              |
 |...                        |...                       |...                                                                                   |
 
 

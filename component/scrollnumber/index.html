@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scroll Number</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/scrollnumber.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sn"></div>
+
+        <div class="tools">
+            <input type="number" id="input">
+            <button type="button" id="btn">Change</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        var sn = createScrollNumber(document.getElementById('sn'), 5, 0);
+
+        document.getElementById('btn').onclick = function () {
+
+            sn.setNumber(parseInt(document.getElementById('input').value));
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyboard Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>Keydown testing</h1>
+        <hr>
+    </header>
+    <section id="buttonville">
+        <h2>Trigger through generic Event object</h2>
+        <ul id="buttons-generic">
+            <li>
+                <button data-key="37">Left</button>
+                <button data-key="39">Right</button>
+                <button data-key="38">Up</button>
+                <button data-key="40">Down</button>
+                <button data-key="13">Enter</button>
+                <button data-key="27">Esc</button>
+                <button data-key="65">A</button>
+            </li>
+        </ul>
+        <h2>Trigger through KeyboardEvent</h2>
+        <ul id="buttons-keyboard">
+            <li>
+                <button data-key="37">Left</button>
+                <button data-key="39">Right</button>
+                <button data-key="38">Up</button>
+                <button data-key="40">Down</button>
+                <button data-key="13">Enter</button>
+                <button data-key="27">Esc</button>
+                <button data-key="65">A</button>
+            </li>
+        </ul>
+        <hr>
+    </section>
+    <section id="tracer">
+        <ul class="logs"></ul>
+    </section>
+
+    <script src="../../pub/js/jquery.min.js"></script>
+    <script>
+        function __triggerKeyboardEvent(el, keyCode) {
+            var eventObj = document.createEventObject ?
+                document.createEventObject() : document.createEvent("Events");
+
+            if (eventObj.initEvent) {
+                eventObj.initEvent("keydown", true, true);
+            }
+
+            eventObj.keyCode = keyCode;
+            eventObj.which = keyCode;
+
+            el.dispatchEvent ? el.dispatchEvent(eventObj) : el.fireEvent("onkeydown", eventObj);
+
+        }
+
+        function traceEvent(e) {
+            $(".logs").prepend(jQuery("<li>").html(
+                "Key = " + e.keyCode
+            ).fadeIn());
+
+            console.log(e);
+        }
+
+        function triggerKeyboardEvent(el, keyCode) {
+            var keyboardEvent = document.createEvent("KeyboardEvent");
+
+            var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" :
+                "initKeyEvent";
+
+
+            keyboardEvent[initMethod](
+                "keydown",
+                true, // bubbles oOooOOo0
+                true, // cancelable   
+                window, // view
+                false, // ctrlKeyArg
+                false, // altKeyArg
+                false, // shiftKeyArg
+                false, // metaKeyArg
+                keyCode,
+                0 // charCode   
+            );
+
+            el.dispatchEvent(keyboardEvent);
+        }
+
+        $(document).ready(function () {
+
+            document.addEventListener("keydown", function (e) {
+                traceEvent(e);
+            });
+
+            $("#buttons-generic").find("button").click(function () {
+                __triggerKeyboardEvent(document.body, parseInt($(this).attr("data-key")));
+            });
+
+            $("#buttons-keyboard").find("button").click(function () {
+                triggerKeyboardEvent(document.body, parseInt($(this).attr("data-key")));
+            });
+
+        });
+    </script>
+</body>
+
+</html>

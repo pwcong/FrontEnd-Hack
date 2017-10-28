@@ -3,9 +3,9 @@
     "use strict";
 
     var files = [
-        "../../pub/imgs/1.jpg",
-        "../../pub/imgs/2.jpg",
-        "../../pub/imgs/3.jpg"
+        "../../public/imgs/1.jpg",
+        "../../public/imgs/2.jpg",
+        "../../public/imgs/3.jpg"
     ];
 
     var index = 0;

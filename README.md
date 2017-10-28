@@ -31,6 +31,7 @@
 |IMGPool - Verticle         |纵向图片瀑布流            |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/imgpool-ver)              |
 |Scroll Number              |滚动数字                   |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/scrollnumber)            |
 |Keyboard Events            |模拟键盘事件               |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/keyboard-events)         |
+|Full Screen                |进入/退出/检测 全屏        |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/full-screen)             |
 |...                        |...                       |...                                                                                   |
 
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full Screen</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="tips">当前处于<span id="state"></span>状态</h1>
+        <div class="tools">
+            <button type="button" id="enterBtn">进入全屏</button>
+            <button type="button" id="exitBtn">退出全屏</button>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        ;
+        (function () {
+
+            'use strict';
+
+            var state = document.getElementById('state');
+            var enterBtn = document.getElementById('enterBtn');
+            var exitBtn = document.getElementById('exitBtn');
+
+            //进入全屏
+            function enterFullScreen() {
+                var de = document.documentElement;
+                if (de.requestFullscreen) {
+                    de.requestFullscreen();
+                } else if (de.mozRequestFullScreen) {
+                    de.mozRequestFullScreen();
+                } else if (de.webkitRequestFullScreen) {
+                    de.webkitRequestFullScreen();
+                }
+            }
+            //退出全屏
+            function exitFullscreen() {
+                var de = document;
+                if (de.exitFullscreen) {
+                    de.exitFullscreen();
+                } else if (de.mozCancelFullScreen) {
+                    de.mozCancelFullScreen();
+                } else if (de.webkitCancelFullScreen) {
+                    de.webkitCancelFullScreen();
+                }
+            }
+
+            function isFullScreen() {
+                return document.fullscreenElement ||
+                    document.msFullscreenElement ||
+                    document.mozFullScreenElement ||
+                    document.webkitFullscreenElement || false;
+            }
+
+            function initView() {
+
+                state.innerHTML = '正常';
+                exitBtn.style.display = 'none';
+
+                enterBtn.onclick = function (e) {
+
+                    enterFullScreen();
+                }
+
+                exitBtn.onclick = function (e) {
+
+                    exitFullscreen();
+                }
+
+                document.body.onresize = function (e) {
+                    if (isFullScreen()) {
+                        state.innerHTML = '全屏';
+                        enterBtn.style.display = 'none';
+                        exitBtn.style.display = 'initial';
+
+                    } else {
+                        state.innerHTML = '正常';
+                        enterBtn.style.display = 'initial';
+                        exitBtn.style.display = 'none';
+
+                    }
+                }
+
+            }
+
+            function init() {
+
+                initView();
+
+            }
+
+            init();
+
+        })();
+    </script>
+
+</body>
+
+</html>

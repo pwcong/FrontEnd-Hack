@@ -164,30 +164,21 @@ define(function (require, exports, module) {
     that.monthEl.innerHTML = that.currentMonth + '月';
 
     var page = Calendar.getPage(this.currentYear, this.currentMonth);
-    
-    if(page.length < 1){
+
+    if (page.length < 1) {
       return;
     }
-
-    var i;
-    var t = page[0].day;
-    for(i = 0; i < t; i++){
-
-      page.unshift({
-        year: that.currentYear,
-        month: that.currentMonth,
-        date: -1,
-        day: i
-      });
-
-    }
-
-
 
     var pageLength = page.length;
     var pageFragment = document.createDocumentFragment();
 
-    for(i = 0; i < pageLength; i++){
+    var i, t = page[0].day;
+    var firstPageItem = createElement('div', 'calendar-page-item', page[0].date > 0 ? page[0].date : '');
+    firstPageItem.style.marginLeft = t * 14.285714 + '%'
+    pageFragment.appendChild(firstPageItem);
+
+
+    for (i = 1; i < pageLength; i++) {
 
       var pageItem = createElement('div', 'calendar-page-item', page[i].date > 0 ? page[i].date : '');
       pageFragment.appendChild(pageItem);

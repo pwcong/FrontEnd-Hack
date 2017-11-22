@@ -1,0 +1,14 @@
+.container {
+  padding-top: 100px;
+}
+
+#myCalendar {
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#myCalendar .calendar-week {
+  background-color: #aaa;
+  color: white;
+}

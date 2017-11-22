@@ -33,6 +33,7 @@
 |Keyboard Events            |模拟键盘事件               |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/keyboard-events)         |
 |Full Screen                |进入/退出/检测 全屏        |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/full-screen)             |
 |Simple Calendar            |简单的日历                |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/simple-calendar)         |
+|jQuery Calendar            |简单的日历-jQuery插件版   |[Preview](https://pwcong.github.io/FrontEnd-Hack/components/jquery-calendar)         |
 |...                        |...                       |...                                                                                 |
 
 

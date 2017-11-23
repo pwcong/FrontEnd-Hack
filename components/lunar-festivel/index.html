@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lunar Or Festivel</title>
+
+  <link rel="stylesheet" href="../jquery-calendar/assets/libs/calendar/calendar.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="result">---</div>
+
+    <div id="myCalendar"></div>
+
+    <p id="tips">请点击日期以查看农历或节日信息</p>
+
+
+  </div>
+
+  <script src="../../public/js/jquery.min.js"></script>
+  <script src="../jquery-calendar/assets/libs/calendar/calendar.js"></script>
+  <script src="assets/libs/lunar-festivel.js"></script>
+
+
+  <script>
+    function formatInt(i) {
+      return i < 10 ? '0' + i : '' + i;
+    }
+
+    $('#myCalendar').Calendar({
+      onPageItemClick: function (ctx, el, year, month, date, day) {
+        var d = new Date(year + '/' + formatInt(month) + '/' + formatInt(date));
+        $('#result').html($.getLunarOrFestivelDay(d));
+      }
+    });
+  </script>
+
+</body>
+
+</html>

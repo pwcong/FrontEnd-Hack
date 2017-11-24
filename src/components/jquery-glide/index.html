@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Glide</title>
+
+  <link rel="stylesheet" href="assets/libs/glide/glide.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <ul id="myGlide" class="glide">
+
+      <li class="glide-item glide-item-active" data-active>
+        <div class="glide-item-poster" style="background-color:rgb(255, 145, 0);"></div>
+        <div class="glide-item-behind">1</div>
+      </li>
+      <li class="glide-item">
+        <div class="glide-item-poster" style="background-color:rgb(0, 179, 104);"></div>
+        <div class="glide-item-behind">2</div>
+      </li>
+      <li class="glide-item">
+        <div class="glide-item-poster" style="background-color:rgb(255, 0, 98);"></div>
+        <div class="glide-item-behind">3</div>
+      </li>
+
+    </ul>
+
+    <p id="tips">Please hover the color block.</p>
+
+  </div>
+
+  <script src="../../public/js/jquery.min.js"></script>
+  <script src="assets/libs/glide/glide.js"></script>
+  <script>
+    $('#myGlide').Glide();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding-top: 100px;
+}
+
+#myGlide {
+  width: 450px;
+  height: 200px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+}
+
+#myGlide .glide-item-behind {
+
+  line-height: 200px;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+#tips{
+  margin-top: 24px;
+  font-size: 20px;
+  text-align: center;
+}

@@ -36,6 +36,7 @@
 |Simple Calendar            |简单的日历                |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/simple-calendar)     |
 |jQuery Calendar            |简单的日历-jQuery插件版   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-calendar)     |
 |Lunar Festivel             |获取公历对应的农历或节日信息 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/lunar-festivel)     |
+|jQuery Glide               |横向滑动菜单组件           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-glide)       |
 |...                        |...                       |...                                                                                 |
 
 

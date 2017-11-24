@@ -1,0 +1,25 @@
+.glide {
+  overflow: auto;
+  *zoom: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.glide-item {
+  float: left;
+  transition: width 0.4s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.glide-item-poster {
+  float: left;
+  height: 100%;
+}
+
+.glide-item-behind {
+  display: inline-block;
+  height: 100%;
+}

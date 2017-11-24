@@ -13,6 +13,7 @@
 |Loop Indicatoin            |循环的Indication组件      |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/loop-indication)     |
 |BiliBili SideBar           |B站可拖拽排序侧边栏组件    |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/bilibili-sidebar)     |
 |Popup                      |气泡提示框组件            |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/popup)              |
+|Popup Pro                  |气泡提示框组件Pro         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/popup-pro)          |
 |Github Contribution Graph  |Github贡献图组件     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/github-contribution-graph)|
 |Zhihu Topbar               |知乎Topbar组件            |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/zhihu-topbar)        |
 |Block Generator            |随机色块生成器            |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/block-generator)     |

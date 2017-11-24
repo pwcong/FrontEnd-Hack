@@ -1,0 +1,25 @@
+{
+  "name": "frontend-hack",
+  "version": "1.0.0",
+  "description": "个人总结的前端组件。",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server \"src\" --files \"src\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwcong/FrontEnd-Hack.git"
+  },
+  "keywords": [
+    "FrontEnd-Hack"
+  ],
+  "author": "Pwcong <pwcong@foxmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pwcong/FrontEnd-Hack/issues"
+  },
+  "homepage": "https://github.com/pwcong/FrontEnd-Hack#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

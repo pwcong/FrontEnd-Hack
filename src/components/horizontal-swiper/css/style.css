@@ -1,0 +1,20 @@
+.container {
+  padding-top: 150px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 500px;
+}
+
+#yearSelector{
+
+    box-shadow: 0 0 1px #aaa;
+
+}
+
+#yearSelector .horizontal-swiper-navigation{
+
+    line-height: 24px;
+
+}

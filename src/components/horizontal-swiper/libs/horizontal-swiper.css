@@ -1,0 +1,50 @@
+.horizontal-swiper {
+  position: relative;
+
+  width: 100%;
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+.horizontal-swiper-wrap {
+  position: relative;
+  left: 0;
+}
+
+.horizontal-swiper-sec {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.horizontal-swiper-sec table {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.horizontal-swiper-navigation {
+  background: white;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  text-align: center;
+
+  overflow: hidden;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.horizontal-swiper-navigation-disabled {
+  cursor: not-allowed;
+}
+
+.horizontal-swiper-navigation-pre {
+  left: 0;
+}
+
+.horizontal-swiper-navigation-nxt {
+  right: 0;
+}

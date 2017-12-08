@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horizontal Swiper</title>
+
+    <link rel="stylesheet" href="libs/horizontal-swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="main">
+
+            <div id="yearSelector"></div>
+
+        </div>
+
+
+    </div>
+
+    <script src="../../public/js/jquery.min.js"></script>
+    <script src="libs/horizontal-swiper.js"></script>
+    <script>
+        var data = [];
+        for (var i = 2000; i <= 2020; i++) {
+            data.push(i);
+        }
+        var selectedIndex = 10;
+        $('#yearSelector').HorizontalSwiper(data, {
+
+            sectionMinWidth: 100,
+            selectedIndex: selectedIndex,
+            renderSwiperItem: function (idx, item) {
+
+                if (idx == selectedIndex) {
+                    return '<span style="color: red;">' + item + '</span>';
+                }
+
+                return item;
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>

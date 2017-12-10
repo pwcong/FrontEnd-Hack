@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax Promise</title>
+  <style>
+    html,
+    body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      padding-top: 100px;
+      background-color: #333;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      color: white;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .container pre{
+      margin: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <pre>
+        AjaxPromise('https://cn.vuejs.org/images/logo.png', 'GET', {}, {})
+        .then(function (res) {
+          console.log(res);
+        }).catch(function (err) {
+          console.log(err);
+        });
+    </pre>
+
+  </div>
+
+  <script src="../promise/libs/promise.js"></script>
+  <script src="libs/ajax-promise.js"></script>
+  <script>
+    AjaxPromise('#', 'GET', {}, {})
+      .then(function (res) {
+        console.log(res)
+      }).catch(function (err) {
+        console.log(err);
+      });
+  </script>
+
+</body>
+
+</html>

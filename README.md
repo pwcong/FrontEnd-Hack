@@ -38,6 +38,8 @@
 |Lunar Festivel             |获取公历对应的农历或节日信息 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/lunar-festivel)     |
 |jQuery Glide               |横向滑动菜单组件           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-glide)       |
 |Horizontal Swiper          |横向Swiper组件             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/horizontal-swiper)  |
+|Promise                    |Promise实现原理           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/promise)  |
+|Ajax Promise               |Ajax With Promise         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/ajax-promise)  |
 |...                        |...                       |...                                                                                 |
 
 

@@ -261,8 +261,6 @@
         this.options.selectedIndex / this.options.sectionColNums
       );
 
-      console.log(this.options.currentIndex);
-
       if (
         this.options.navigation &&
         this.options.currentIndex == 0 &&

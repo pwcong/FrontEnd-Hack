@@ -9,23 +9,27 @@
   <style>
     html,
     body {
-      position: relative;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
       padding: 0;
       margin: 0;
+      overflow: hidden;
     }
 
     .container {
-      padding-top: 100px;
-      background-color: #333;
-      position: relative;
+      overflow: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
+      background-color: #333;
 
       color: white;
       font-size: 18px;
-      line-height: 24px;
     }
 
     .container pre{
@@ -40,12 +44,50 @@
   <div class="container">
 
     <pre>
+
+        ///////////////////////
+        // 定义ajax-promise.js
+        ///////////////////////
+
+        var AjaxPromise = function(url, method, header, data) {
+          return new Promise(function(resolve, reject) {
+            var xhr = createXHR();
+            xhr.open(method, url, true);
+            for (var key in header) {
+              xhr.setRequestHeader(key, header[key]);
+            }
+            xhr.onreadystatechange = function() {
+              if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                  resolve(xhr.responseText);
+                } else {
+                  reject('请求失败');
+                }
+              }
+            };
+      
+            xhr.send(data);
+          });
+        };
+
+
+        ///////////////////////
+        // 使用
+        ///////////////////////
+
+        &lt;script src="../promise/libs/promise.js"&gt;&lt;/script&gt;
+        &lt;script src="libs/ajax-promise.js"&gt;&lt;/script&gt;
+
         AjaxPromise('https://cn.vuejs.org/images/logo.png', 'GET', {}, {})
-        .then(function (res) {
-          console.log(res);
-        }).catch(function (err) {
-          console.log(err);
-        });
+          .then(function (res) {
+
+            console.log(res);
+
+          }).catch(function (err) {
+
+            console.log(err);
+            
+          });
     </pre>
 
   </div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Move - Rotate - Resize</title>
+
+  <style>
+    html,body{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+    }
+
+    .stage{
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: white;
+
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .target{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      outline: 1px dashed #ccc;
+    }
+
+    .target-action{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      user-select: none;
+    }
+
+    .target-action-move{
+      left: -5px;
+      top: -5px;
+      background-color: red;
+      cursor: move;
+    }
+
+    .target-action-rotate{
+      right: -5px;
+      top: -5px;
+      background-color: green;
+      cursor: pointer;
+    }
+
+    .target-action-resize{
+      bottom: -5px;
+      right: -5px;
+      background-color: blue;
+      cursor: se-resize;
+    }
+  
+  </style>
+
+</head>
+<body>
+  
+  <div class="container">
+
+    <div class="stage">
+
+      <div class="target" style="left: 50px; top: 50px;">
+        <div class="target-wrap"></div>
+        <div class="target-action target-action-move" data-action="move"></div>
+        <div class="target-action target-action-rotate" data-action="rotate"></div>
+        <div class="target-action target-action-resize" data-action="resize"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+  
+    var 
+      stage = document.getElementsByClassName('stage')[0],
+      target = document.getElementsByClassName('target')[0],
+      moveAction = document.getElementsByClassName('target-action-move')[0],
+      rotateAction = document.getElementsByClassName('target-action-rotate')[0],
+      resizeAction = document.getElementsByClassName('target-action-resize')[0],
+
+  
+  
+  </script>
+
+
+</body>
+</html>

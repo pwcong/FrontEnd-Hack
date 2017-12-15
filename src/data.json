@@ -198,9 +198,9 @@
       {
         "title": "公历转换农历",
         "intro": "获取公历对于农历信息",
-        "tags": ["festivel", "lunar"],
+        "tags": ["lunar"],
         "url":
-          "https://pwcong.github.io/FrontEnd-Hack/src/components/lunar-festivel"
+          "https://pwcong.github.io/FrontEnd-Hack/src/components/lunar"
       },
       {
         "title": "横向滑动菜单-jQuery插件",

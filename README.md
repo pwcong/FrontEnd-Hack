@@ -35,7 +35,7 @@
 |Full Screen                |进入/退出/检测 全屏        |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/full-screen)        |
 |Simple Calendar            |简单的日历                |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/simple-calendar)     |
 |jQuery Calendar            |简单的日历-jQuery插件版   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-calendar)     |
-|Lunar Festivel             |获取公历对应的农历或节日信息 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/lunar-festivel)     |
+|Lunar                      |获取公历对应的农历信息     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/lunar)     |
 |jQuery Glide               |横向滑动菜单组件           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-glide)       |
 |Horizontal Swiper          |横向Swiper组件             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/horizontal-swiper)  |
 |Promise                    |Promise实现原理           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/promise)  |

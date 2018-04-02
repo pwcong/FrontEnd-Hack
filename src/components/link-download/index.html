@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Link Download</title>
+</head>
+
+<body>
+
+  <div class="container" style="text-align: center;">
+
+    <canvas id="canvas" style="border: 2px solid black; margin: 0 auto;" width="200" height="200"></canvas>
+
+    <div>
+      <button type="button" id="btn">下载图片</button>
+    </div>
+
+  </div>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var img = new Image();
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0, 200, 200);
+    }
+
+    img.setAttribute('crossOrigin', 'anonymous')
+    img.src = '../../public/imgs/4.jpg';
+
+    /************ 主要下载操作 ************/
+    document.getElementById('btn').onclick = function () {
+      var link = document.createElement('a');
+      link.href = canvas.toDataURL().replace('image/png', 'image/octet-stream');
+      link.download = 'Test.png';
+
+      link.click();
+    }
+
+  </script>
+
+</body>
+
+</html>

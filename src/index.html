@@ -6,15 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FrontEnd Hack</title>
+
+  <style>
+    table {
+      margin-bottom: 24px;
+      border: 1px solid #ccc;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table .header {
+      background-color: darkcyan;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    table .first td{
+      background-color: #888;
+      color: white;
+    }
+
+    table tr {
+      font-size: 13px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    table .tag {
+      margin: 4px;
+      display: inline-block;
+      background-color: #ccc;
+      padding: 4px 6px;
+      font-size: 11px;
+      border-radius: 2px;
+    }
+  </style>
 </head>
 
 <body>
 
+  <div id="main">
 
+  </div>
+
+
+  <script src="./public/js/jquery.min.js"></script>
   <script>
-    
-    
-  
+
+    $(document).ready(function () {
+
+      $.getJSON('data.json', function (res) {
+
+        res = res || [];
+
+        $.each(res, function (i, d) {
+          var table = $('<table></table>').appendTo($('#main'));
+          var header = $('<tr class="header"></tr>').appendTo(table);
+          $('<td colspan="4">' + d.category + '</td>').appendTo(header);
+          $('<tr class="first"><td>标题</td><td>介绍</td><td>标签</td><td>预览</td></tr>').appendTo(table);
+
+          $.each(d.list, function (_i, _d) {
+
+            var row = $('<tr></tr>').appendTo(table);
+            $('<td>' + _d.title + '</td>').appendTo(row);
+            $('<td>' + _d.intro + '</td>').appendTo(row);
+            var tags = $('<td></td>').appendTo(row);
+            $.each(_d.tags, function (__i, __d) {
+              $('<span class="tag">' + __d + '</span>').appendTo(tags);
+            });
+
+            var link = $('<td></td>').appendTo(row);
+            $('<a href="' + _d.url + '">查看</a>').appendTo(link);
+          });
+
+        });
+
+      });
+    });
+
+
   </script>
 
 </body>

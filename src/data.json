@@ -6,205 +6,217 @@
         "title": "上传进度实例",
         "intro": "Ajax获取上传进度值",
         "tags": ["progress"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress"
+        "url": "components/upload-progress"
       },
       {
         "title": "拖拽读取",
         "intro": "获取拖拽入窗口文件的信息",
         "tags": ["drag&drop", "File"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/drag-and-drop"
+        "url": "components/drag-and-drop"
       },
       {
         "title": "文件管理",
         "intro": "管理拖拽入窗口的文件",
         "tags": ["drag$drop", "File"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/upload-manager"
+        "url": "components/upload-manager"
       },
       {
         "title": "Banner",
         "intro": "循环播放Banner组件",
         "tags": ["banner"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/loop-banner"
+        "url": "components/loop-banner"
       },
       {
         "title": "Indication",
         "intro": "Indicatoin组件",
         "tags": ["indication"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/loop-indication"
+        "url": "components/loop-indication"
       },
       {
         "title": "Bilibili SideBar",
         "intro": "仿B站侧边栏组件，可拖拽排序",
         "tags": ["drag&drop", "sidebar"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/bilibili-sidebar"
+        "url": "components/bilibili-sidebar"
       },
       {
         "title": "Popup",
         "intro": "气泡提示框组件",
         "tags": ["popup", "tips"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/popup"
+        "url": "components/popup"
       },
       {
         "title": "Popup Pro",
         "intro": "升级版气泡提示框，CSS3特性实现",
         "tags": ["popup"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/popup-pro"
+        "url": "components/popup-pro"
       },
       {
         "title": "Github Contribution Graph",
         "intro": "Github 贡献图组件",
         "tags": ["github", "contribution-graph"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/github-contribution-graph"
+        "url": "components/github-contribution-graph"
       },
       {
         "title": "知乎Topbar",
         "intro": "仿知乎顶部工具条",
         "tags": ["topbar"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/zhihu-topbar"
+        "url": "components/zhihu-topbar"
       },
       {
         "title": "色块生成器",
         "intro": "随机色块生成器",
         "tags": ["color-block", "generator"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/block-generator"
+        "url": "components/block-generator"
       },
       {
         "title": "Scroll Top To",
         "intro": "窗口平滑至目标高度",
         "tags": ["scroll-top-to"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/scroll-top-to"
+        "url": "components/scroll-top-to"
       },
       {
         "title": "返回顶部",
         "intro": "(●ˇ∀ˇ●)",
         "tags": ["scroll-to-top"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/scroll-to-top"
+        "url": "components/scroll-to-top"
       },
       {
         "title": "Material Input",
         "intro": "Material风格输入框组件",
         "tags": ["Material", "Input"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/material-input"
+        "url": "components/material-input"
       },
       {
         "title": "响应式Header",
         "intro": "emmmmmmm",
         "tags": ["responsive-header"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/responsive-header"
+        "url": "components/responsive-header"
       },
       {
         "title": "Background Attachment",
         "intro": "background-attachment属性演示示例",
         "tags": ["CSS3"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/background-attachment"
+        "url": "components/background-attachment"
       },
       {
         "title": "音量调节器（笑）",
         "intro": "666的音量调节器，一股清流",
         "tags": ["volumn-slider"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/volumn-slider"
+        "url": "components/volumn-slider"
       },
       {
         "title": "阿里云地图",
         "intro": "阿里云地图展示组件",
         "tags": ["aliyun-map"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/aliyun-map"
+        "url": "components/aliyun-map"
       },
       {
         "title": "CSS三角形",
         "intro": "CSS实现三角形",
         "tags": ["CSS3", "Triangle"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/css-triangle"
+        "url": "components/css-triangle"
       },
       {
         "title": "IE版本检测器",
         "intro": "检测IE版本（万恶的IE）",
         "tags": ["ie", "version"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/ie-checker"
+        "url": "components/ie-checker"
       },
       {
         "title": "选择器",
         "intro": "div实现select功能",
         "tags": ["select"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/selector"
+        "url": "components/selector"
       },
       {
         "title": "CSS3: Before&After伪类",
         "intro": "演示DEMO",
         "tags": ["CSS3", "::before", "::after"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/before-after"
+        "url": "components/before-after"
       },
       {
         "title": "瀑布流",
         "intro": "自动平衡，自动增长",
         "tags": ["pool"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/imgpool-ver"
+        "url": "components/imgpool-ver"
       },
       {
         "title": "滚动数字组件",
         "intro": "滚动吧，数字！",
         "tags": ["scroll-number"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/scrollnumber"
+        "url": "components/scrollnumber"
       },
       {
         "title": "模拟键盘事件",
         "intro": "JS模拟键盘事件，炒鸡有用嘿嘿嘿",
         "tags": ["keyboard-events"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/keyboard-events"
+        "url": "components/keyboard-events"
       },
       {
         "title": "全屏",
         "intro": "进入/退出/检测 窗口全屏状态",
         "tags": ["full-screen"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/full-screen"
+        "url": "components/full-screen"
       },
       {
         "title": "简单日历",
         "intro": "日历第一次尝试",
         "tags": ["simple-calendar"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/simple-calendar"
+        "url": "components/simple-calendar"
       },
       {
         "title": "简单日历-jQuery插件",
         "intro": "简单日历第二次尝试",
         "tags": ["jquery-calendar"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-calendar"
+        "url": "components/jquery-calendar"
       },
       {
         "title": "公历转换农历",
         "intro": "获取公历对于农历信息",
         "tags": ["lunar"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/lunar"
+        "url": "components/lunar"
       },
       {
         "title": "横向滑动菜单-jQuery插件",
         "intro": "炫酷的横向滑动菜单效果",
         "tags": ["jquery-glide"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-glide"
+        "url": "components/jquery-glide"
       },
       {
         "title": "Swiper",
         "intro": "自定义横向Swiper，实现多组，自动滑动等功能",
         "tags": ["horizontal-swiper"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/horizontal-swiper"
+        "url": "components/horizontal-swiper"
       },
       {
         "title": "Promise",
         "intro": "Promise简单版实现原理",
         "tags": ["promise", "async"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/promise"
+        "url": "components/promise"
       },
       {
         "title": "Ajax-Promise",
         "intro": "阿贾克斯Promise版",
         "tags": ["ajax", "promise"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/ajax-promise"
+        "url": "components/ajax-promise"
       },
       {
         "title": "自定义Radio",
         "intro": "。。。",
         "tags": ["radio"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/components/custom-radio"
+        "url": "components/custom-radio"
+      },
+      {
+        "title": "HTML2Canvas",
+        "intro": "将HTML元素渲染成Canvas",
+        "tags": ["html2canvas"],
+        "url": "components/html-to-canvas"
+      },
+      {
+        "title": "下载操作",
+        "intro": "JS实现下载功能",
+        "tags": ["link", "download"],
+        "url": "components/link-download"
       }
     ]
   },
@@ -215,13 +227,13 @@
         "title": "ICBC星座卡展示（微信端）",
         "intro": "纵向翻页，播放视频",
         "tags": ["swiper", "video.js"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/websites/icbc-constellation-card"
+        "url": "websites/icbc-constellation-card"
       },
       {
         "title": "腾讯云官网",
         "intro": "Vue多组件构建，效果酷炫",
         "tags": ["vue", "webpack"],
-        "url": "https://pwcong.github.io/FrontEnd-Hack/src/websites/qcloud"
+        "url": "websites/qcloud"
       }
     ]
   }

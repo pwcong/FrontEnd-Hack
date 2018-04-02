@@ -39,8 +39,10 @@
 |jQuery Glide               |横向滑动菜单组件           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/jquery-glide)       |
 |Horizontal Swiper          |横向Swiper组件             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/horizontal-swiper) |
 |Promise                    |Promise实现原理           |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/promise)            |
-|Ajax Promise               |Ajax With Promise         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/ajax-promise)     |
+|Ajax Promise               |Ajax With Promise         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/ajax-promise)      |
 |Custom Radio               |自定义Radio               |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/custom-radio)      |
+|HTML2Canvas                |将HTML元素渲染成Canvas     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/html-to-canvas)    |
+|Link Download              |JS实现下载功能             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/link-download)     |
 |...                        |...                       |...                                                                                |
 
 

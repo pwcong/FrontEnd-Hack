@@ -217,6 +217,12 @@
         "intro": "JS实现下载功能",
         "tags": ["link", "download"],
         "url": "components/link-download"
+      },
+      {
+        "title": "CSS变量",
+        "intro": "CSS变量",
+        "tags": ["css-var"],
+        "url": "components/css-var"
       }
     ]
   },

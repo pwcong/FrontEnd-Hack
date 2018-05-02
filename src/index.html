@@ -20,11 +20,17 @@
       color: white;
       font-size: 18px;
       text-align: center;
+      border-bottom: none;
     }
 
-    table .first td{
-      background-color: #888;
+    table .header td {
+      padding: 8px;
+    }
+
+    table .first td {
+      background-color: #aaa;
       color: white;
+      padding: 2px;
     }
 
     table tr {
@@ -52,7 +58,6 @@
 
   <script src="./public/js/jquery.min.js"></script>
   <script>
-
     $(document).ready(function () {
 
       $.getJSON('data.json', function (res) {
@@ -83,8 +88,6 @@
 
       });
     });
-
-
   </script>
 
 </body>

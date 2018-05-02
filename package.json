@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/pwcong/FrontEnd-Hack#readme",
   "dependencies": {
-    "browser-sync": "^2.18.13"
+    "browser-sync": "^2.24.1"
   }
 }

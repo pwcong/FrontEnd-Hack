@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Var</title>
+
+  <style>
+    body {
+      background-color: #666;
+      --borderColor: #ccc;
+    }
+
+    .container {
+      padding-top: 128px;
+      text-align: center;
+    }
+
+    #box {
+      display: inline-block;
+      width: 400px;
+      height: 220px;
+      border: 1px solid var(--borderColor);
+      color: white;
+      line-height: 220px;
+    }
+
+    #box::before {
+      content: 'Please hover here';
+    }
+
+    #box:hover::before {
+      display: none;
+    }
+
+    #box::after {
+      content: var(--tips);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="box"></div>
+  </div>
+
+  <script>
+    (function (global) {
+
+      var box = document.getElementById('box');
+      box.onmousemove = function (e) {
+        var x = e.pageX - e.target.offsetLeft;
+        var y = e.pageY - e.target.offsetTop;
+        e.target.style.setProperty('--tips', '"x:' + x + 'px, y:' + y + 'px"');
+      }
+      box.onmouseleave = function (e) {
+        e.target.style.setProperty('--tips', '');
+      }
+
+    })(window);
+  </script>
+
+</body>
+
+</html>

@@ -223,6 +223,12 @@
         "intro": "同上",
         "tags": ["sidebar", "progress"],
         "url": "components/sidebar-with-progress"
+      },
+      {
+        "title": "CSS变量",
+        "intro": "CSS变量",
+        "tags": ["css-var"],
+        "url": "components/css-var"
       }
     ]
   },

@@ -217,6 +217,12 @@
         "intro": "JS实现下载功能",
         "tags": ["link", "download"],
         "url": "components/link-download"
+      },
+      {
+        "title": "带阅读进度指示的侧边栏列表项",
+        "intro": "同上",
+        "tags": ["sidebar", "progress"],
+        "url": "components/sidebar-with-progress"
       }
     ]
   },

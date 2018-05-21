@@ -43,7 +43,7 @@
 |Custom Radio               |自定义Radio               |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/custom-radio)      |
 |HTML2Canvas                |将HTML元素渲染成Canvas     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/html-to-canvas)    |
 |Link Download              |JS实现下载功能             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/link-download)     |
-|...                        |...                       |...                                                                                |
+|Sidebar With Progress      |带阅读进度指示的侧边栏列表项 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/sidebar-with-progress)  
 
 
 ### Websites
@@ -51,7 +51,6 @@
 |-------------------------|-----------------------------|-------------------------------------------------------------------------------------|
 |ICBC Constellation Card  |微信端ICBC星座卡宣传页面   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/websites/icbc-constellation-card)   |
 |QCloud                   |腾讯云官网首页             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/websites/qcloud)                    |
-|...                      |...                       |...                                                                                  |
 
 
 ## Member

@@ -46,7 +46,9 @@
 |Custom Radio               |自定义Radio               |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/custom-radio)      |
 |HTML2Canvas                |将HTML元素渲染成Canvas     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/html-to-canvas)    |
 |Link Download              |JS实现下载功能             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/link-download)     |
-|CSS Var              |CSS变量             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/css-var)     |
+|CSS Var                    |CSS变量                   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/css-var)          |
+|浏览器检测                  |浏览器检测                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/browser-checker)  |
+|前端常用校验器集合           |前端常用校验器集合         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/validator)        |
 |...                        |...                       |...                                                                                |
 
 

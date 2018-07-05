@@ -223,6 +223,18 @@
         "intro": "CSS变量",
         "tags": ["css-var"],
         "url": "components/css-var"
+      },
+      {
+        "title": "浏览器检测",
+        "intro": "浏览器检测",
+        "tags": ["browser-checker"],
+        "url": "components/browser-checker"
+      },
+      {
+        "title": "前端常用校验器集合",
+        "intro": "前端常用校验器集合",
+        "tags": ["validator"],
+        "url": "components/validator"
       }
     ]
   },

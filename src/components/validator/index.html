@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前端常用校验器集合</title>
+
+  <script src="../../public/js/jquery.min.js"></script>
+  <script src="../../public/js/clipboard.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    tr:nth-child(2n) {
+      background-color: #eee;
+    }
+
+    tr td {
+      border: 1px solid #999;
+      padding: 8px;
+    }
+
+    tr td:first-child {
+      max-width: 256px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <script>
+    window.success = function () {
+      alert('校验通过！');
+    }
+
+    window.fail = function () {
+      alert('校验失败！');
+    }
+  </script>
+
+  <table>
+    <tr>
+      <td>一代身份证</td>
+      <td>
+        <div>
+          <input type="text" id="id1Input">
+          <button type="button" onclick="checkID1()">校验</button>
+
+          <script>
+            window.checkID1 = function (e) {
+              if (/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/.test($('#id1Input').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+
+        </div>
+        <div>
+          <pre id="id1">^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$</pre>
+          <button class="btn-copy" data-clipboard-target="#id1" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>二代身份证</td>
+      <td>
+        <div>
+          <input type="text" id="id2Input">
+          <button type="button" onclick="checkID2()">校验</button>
+
+          <script>
+
+            window.checkID2 = function (e) {
+              if (/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/.test($('#id2Input').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+
+        </div>
+        <div>
+          <pre id="id2">^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$</pre>
+          <button class="btn-copy" data-clipboard-target="#id2" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>手机号</td>
+      <td>
+        <div>
+          <input type="text" id="mphoneInput">
+          <button type="button" onclick="checkMPhone()">校验</button>
+
+          <script>
+            window.checkMPhone = function (e) {
+              if (/^(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[8-9])[0-9]{8}$/.test($('#mphoneInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="mPhone">^(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[8-9])[0-9]{8}$</pre>
+          <button class="btn-copy" data-clipboard-target="#mPhone" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>邮箱</td>
+      <td>
+        <div>
+          <input type="text" id="mailInput">
+          <button type="button" onclick="checkMail()">校验</button>
+          <script>
+            window.checkMail = function (e) {
+              if (/^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/.test($('#mailInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="mail">^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$</pre>
+          <button class="btn-copy" data-clipboard-target="#mail" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>用户名（4到16位、字母、数字、下划线、减号）</td>
+      <td>
+        <div>
+          <input type="text" id="usernameInput">
+          <button type="button" onclick="checkUsername()">校验</button>
+          <script>
+            window.checkUsername = function (e) {
+              if (/^[a-zA-Z0-9_-]{4,16}$/.test($('#usernameInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="username">^[a-zA-Z0-9_-]{4,16}$</pre>
+          <button class="btn-copy" data-clipboard-target="#username" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>密码（6~18之间、只能包含字母、数字和下划线）</td>
+      <td>
+        <div>
+          <input type="text" id="passwordInput">
+          <button type="button" onclick="checkPassword()">校验</button>
+          <script>
+            window.checkPassword = function (e) {
+              if (/^[a-zA-Z0-9_-]{4,16}$/.test($('#passwordInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="password">^[a-zA-Z]\w{5,17}$</pre>
+          <button class="btn-copy" data-clipboard-target="#password" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>密码强弱（最少6位、包括至少1个大写字母、1个小写字母、1个数字、1个特殊字符）</td>
+      <td>
+        <div>
+          <input type="text" id="sPasswordInput">
+          <button type="button" onclick="checkSPassword()">校验</button>
+          <script>
+            window.checkSPassword = function (e) {
+              if (/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/.test($('#sPasswordInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="sPassword">^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$</pre>
+          <button class="btn-copy" data-clipboard-target="#sPassword" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>QQ号</td>
+      <td>
+        <div>
+          <input type="text" id="qqInput">
+          <button type="button" onclick="checkQQ()">校验</button>
+          <script>
+            window.checkQQ = function (e) {
+              if (/^[1-9][0-9]{4,10}$/.test($('#qqInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="qq">^[1-9][0-9]{4,10}$</pre>
+          <button class="btn-copy" data-clipboard-target="#qq" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>微信号</td>
+      <td>
+        <div>
+          <input type="text" id="weixinInput">
+          <button type="button" onclick="checkWeixin()">校验</button>
+          <script>
+            window.checkWeixin = function (e) {
+              if (/^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test($('#weixinInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="weixin">^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$</pre>
+          <button class="btn-copy" data-clipboard-target="#weixin" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>特殊字符检测（键盘上可见的非字母和数字的符号）</td>
+      <td>
+        <div>
+          <input type="text" id="specialInput">
+          <button type="button" onclick="checkSpecial()">校验</button>
+          <script>
+            window.checkSpecial = function (e) {
+              if (/((?=[\x21-\x7e]+)[^A-Za-z0-9])/.test($('#specialInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="special">((?=[\x21-\x7e]+)[^A-Za-z0-9])</pre>
+          <button class="btn-copy" data-clipboard-target="#special" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>域名</td>
+      <td>
+        <div>
+          <input type="text" id="urlInput">
+          <button type="button" onclick="checkUrl()">校验</button>
+          <script>
+            window.checkUrl = function (e) {
+              if (/^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/.test($('#urlInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="url">^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$</pre>
+          <button class="btn-copy" data-clipboard-target="#url" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>车牌号</td>
+      <td>
+        <div>
+          <input type="text" id="carNoInput">
+          <button type="button" onclick="checkCarNo()">校验</button>
+          <script>
+            window.checkCarNo = function (e) {
+              if (/^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/.test($('#carNoInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="carNo">^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$</pre>
+          <button class="btn-copy" data-clipboard-target="#carNo" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>包含中文</td>
+      <td>
+        <div>
+          <input type="text" id="chineseInput">
+          <button type="button" onclick="checkChinese()">校验</button>
+          <script>
+            window.checkChinese = function (e) {
+              if (/[\u4E00-\u9FA5]/.test($('#chineseInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="chinese">[\u4E00-\u9FA5]</pre>
+          <button class="btn-copy" data-clipboard-target="#chinese" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>护照</td>
+      <td>
+        <div>
+          <input type="text" id="id0Input">
+          <button type="button" onclick="checkID0()">校验</button>
+          <script>
+            window.checkID0 = function (e) {
+              if (/^(P\d{7}|G\d{7,8}|TH\d{7,8}|S\d{7,8}|A\d{7,8}|L\d{7,8}|\d{9}|D\d+|1[4,5]\d{7})$/.test($('#id0Input').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="id0">^(P\d{7}|G\d{7,8}|TH\d{7,8}|S\d{7,8}|A\d{7,8}|L\d{7,8}|\d{9}|D\d+|1[4,5]\d{7})$</pre>
+          <button class="btn-copy" data-clipboard-target="#id0" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>固定电话（区号+座机号码+分机号码）</td>
+      <td>
+        <div>
+          <input type="text" id="phoneInput">
+          <button type="button" onclick="checkPhone()">校验</button>
+          <script>
+            window.checkPhone = function (e) {
+              if (/^(0[0-9]{2,3}\/-)?([2-9][0-9]{6,7})+(\/-[0-9]{1,4})?$/.test($('#phoneInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="phone">^(0[0-9]{2,3}\/-)?([2-9][0-9]{6,7})+(\/-[0-9]{1,4})?$</pre>
+          <button class="btn-copy" data-clipboard-target="#phone" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>IP地址</td>
+      <td>
+        <div>
+          <input type="text" id="ipInput">
+          <button type="button" onclick="checkIP()">校验</button>
+          <script>
+            window.checkIP = function (e) {
+              if (/^((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))$/.test($('#ipInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="ip">^((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))$</pre>
+          <button class="btn-copy" data-clipboard-target="#ip" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>邮政编码</td>
+      <td>
+        <div>
+          <input type="text" id="mailNumInput">
+          <button type="button" onclick="checkMailNum()">校验</button>
+          <script>
+            window.checkMailNum = function (e) {
+              if (/^[1-9]{1}(\d+){5}$/.test($('#mailNumInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="mailNum">^[1-9]{1}(\d+){5}$</pre>
+          <button class="btn-copy" data-clipboard-target="#mailNum" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>经度</td>
+      <td>
+        <div>
+          <input type="text" id="vNumInput">
+          <button type="button" onclick="checkVNum()">校验</button>
+          <script>
+            window.checkVNum = function (e) {
+              if (/^(\-|\+)?(((\d|[1-9]\d|1[0-7]\d|0{1,3})\.\d{0,6})|(\d|[1-9]\d|1[0-7]\d|0{1,3})|180\.0{0,6}|180)$/.test($('#vNumInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="vNum">^(\-|\+)?(((\d|[1-9]\d|1[0-7]\d|0{1,3})\.\d{0,6})|(\d|[1-9]\d|1[0-7]\d|0{1,3})|180\.0{0,6}|180)$</pre>
+          <button class="btn-copy" data-clipboard-target="#vNum" type="button">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>纬度</td>
+      <td>
+        <div>
+          <input type="text" id="hNumInput">
+          <button type="button" onclick="checkHNum()">校验</button>
+          <script>
+            window.checkHNum = function (e) {
+              if (/^(\-|\+)?([0-8]?\d{1}\.\d{0,6}|90\.0{0,6}|[0-8]?\d{1}|90)$/.test($('#hNumInput').val())) {
+                success();
+              } else {
+                fail();
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <pre id="hNum">^(\-|\+)?([0-8]?\d{1}\.\d{0,6}|90\.0{0,6}|[0-8]?\d{1}|90)$</pre>
+          <button class="btn-copy" data-clipboard-target="#hNum">拷贝</button>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+  <script>
+    new ClipboardJS('.btn-copy');
+  </script>
+
+</body>
+
+</html>

@@ -241,6 +241,12 @@
         "intro": "前端常用校验器集合",
         "tags": ["validator"],
         "url": "components/validator"
+      },
+      {
+        "title": "第二代身份证生成与校验器",
+        "intro": "China IDCard v2",
+        "tags": ["china", "idcard"],
+        "url": "components/china-idcard"
       }
     ]
   },

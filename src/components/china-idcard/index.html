@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>第二代身份证生成与校验器</title>
+
+    <fieldset>
+      <legend>生成器</legend>
+      <table style="width: 100%;">
+        <tr>
+          <td>地区：</td>
+          <td>
+            <span id="province"><select name="province"> </select></span>
+            <span id="city" style="display: none;"
+              ><select name="city"></select
+            ></span>
+            <span id="area" style="display: none;"
+              ><select name="area"></select
+            ></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>生日：</td>
+          <td>
+            <span id="year"><select name="year"></select></span>
+            <span style="display: none;" id="month"
+              ><select name="month"></select
+            ></span>
+            <span style="display: none;" id="date"
+              ><select name="date"></select
+            ></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>性别：</td>
+          <td>
+            <label> <input type="radio" name="sex" value="male" /> 男</label>
+            <label> <input type="radio" name="sex" value="female" /> 女</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>数量：</td>
+          <td>
+            <label> <input type="number" name="counts" value="1" /> </label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="button" id="btnGenerate">生成</button>
+            <button type="button" id="btnClean">清空</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><div id="ids" style="padding: 16px;"></div></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>校验器</legend>
+      <input type="text" name="id" />
+      <button type="button" id="btnCheck">校验</button>
+      <div style="margin: 8px 0;" id="result"></div>
+    </fieldset>
+
+    <script src="../../public/js/jquery.min.js"></script>
+    <script src="dist/china-idcard.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var now = new Date();
+
+        var provinceSelect = $('[name="province"]');
+        var citySelect = $('[name="city"]');
+        var areaSelect = $('[name="area"]');
+        var yearSelect = $('[name="year"]');
+        var monthSelect = $('[name="month"]');
+        var dateSelect = $('[name="date"]');
+
+        var chinaIDCard = new ChinaIDCard();
+
+        //初始化地区选择器
+        var provinces = chinaIDCard.getProvinces();
+
+        $('<option/>')
+          .text('请选择')
+          .attr('value', '-1')
+          .appendTo(provinceSelect);
+        $.each(provinces || [], function(_, p) {
+          $('<option/>')
+            .attr('value', p.value)
+            .text(p.name)
+            .appendTo(provinceSelect);
+        });
+        provinceSelect.change(function() {
+          $('#city').hide();
+          $('#area').hide();
+
+          var value = $(this).val();
+          if (!value) {
+          } else {
+            citySelect.empty();
+            var cities = chinaIDCard.getCities(value);
+            if (!cities || cities.length < 1) {
+            } else {
+              $('#city').show();
+              $('<option/>')
+                .attr('value', '-1')
+                .text('请选择')
+                .appendTo(citySelect);
+              $.each(cities || [], function(_, c) {
+                $('<option/>')
+                  .attr('value', c.value)
+                  .text(c.name)
+                  .appendTo(citySelect);
+              });
+            }
+          }
+        });
+
+        citySelect.change(function() {
+          $('#area').hide();
+
+          var value = $(this).val();
+          if (!value) {
+          } else {
+            areaSelect.empty();
+
+            var areas = chinaIDCard.getAreas(value);
+            if (!areas || areas.length < 1) {
+            } else {
+              $('#area').show();
+              $('<option/>')
+                .text('请选择')
+                .attr('value', '-1')
+                .appendTo(areaSelect);
+              $.each(areas || [], function(_, a) {
+                $('<option/>')
+                  .attr('value', a.value)
+                  .text(a.name)
+                  .appendTo(areaSelect);
+              });
+            }
+          }
+        });
+
+        //初始化生日选择器
+        $('<option/>')
+          .text('请选择')
+          .attr('value', '-1')
+          .appendTo(yearSelect);
+        for (var i = 1900; i <= now.getFullYear(); i++) {
+          var yearOption = $('<option/>')
+            .attr('value', i)
+            .text(i + '年')
+            .appendTo(yearSelect);
+        }
+
+        yearSelect.change(function() {
+          $('#month').hide();
+          $('#date').hide();
+
+          var value = $(this).val();
+          if (!value) {
+          } else {
+            $('#month').show();
+
+            monthSelect.empty();
+            $('<option/>')
+              .text('请选择')
+              .attr('value', '-1')
+              .appendTo(monthSelect);
+            for (var m = 1; m <= 12; m++) {
+              $('<option/>')
+                .text(m + '月')
+                .attr('value', m)
+                .appendTo(monthSelect);
+            }
+          }
+        });
+
+        monthSelect.change(function() {
+          $('#date').hide();
+
+          var value = $(this).val();
+          if (!value) {
+          } else {
+            $('#date').show();
+
+            dateSelect.empty();
+            $('<option/>')
+              .text('请选择')
+              .attr('value', '-1')
+              .appendTo(dateSelect);
+
+            var days = 0;
+
+            var year = parseInt($('[name="year"]').val());
+            var month = parseInt($('[name="month"]').val());
+
+            switch (month) {
+              case 1:
+              case 3:
+              case 5:
+              case 7:
+              case 8:
+              case 10:
+              case 12:
+                days = 31;
+                break;
+              case 4:
+              case 6:
+              case 9:
+              case 11:
+                days = 30;
+                break;
+              case 2:
+                if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                  days = 29;
+                } else {
+                  days = 28;
+                }
+                break;
+              default:
+                break;
+            }
+
+            for (var d = 1; d <= days; d++) {
+              $('<option/>')
+                .text(d + '日')
+                .attr('value', d)
+                .appendTo(dateSelect);
+            }
+          }
+        });
+
+        //初始化按钮
+        $('#btnGenerate').click(function() {
+          $('#ids').empty();
+        });
+
+        $('#btnGenerate').click(function() {
+          $('#ids').empty();
+
+          var id =
+            $('[name="area"]').val() ||
+            $('[name="city"]').val() ||
+            $('[name="province"]').val();
+
+          if (id == '-1') {
+            alert('请选择完整的地区');
+            return;
+          }
+
+          var year = $('[name="year"]').val();
+          var month = $('[name="month"]').val();
+          var date = $('[name="date"]').val();
+
+          if (
+            !year ||
+            !month ||
+            !date ||
+            year == '-1' ||
+            month == '-1' ||
+            date == '-1'
+          ) {
+            alert('请选择完整的生日');
+            return;
+          }
+
+          var sex = $('[name="sex"]:checked').val();
+          if (!sex) {
+            alert('请选择性别');
+            return;
+          }
+
+          var counts = parseInt($('[name="counts"]').val());
+          if (counts < 1) {
+            alert('请输入正确的数量（大于或等于1）');
+            return;
+          }
+
+          var res = chinaIDCard.generate(
+            id,
+            {
+              year: parseInt(year),
+              month: parseInt(month),
+              date: parseInt(date),
+              isFemale: sex == 'female'
+            },
+            counts
+          );
+
+          $.each(res || [], function(_, item) {
+            $('<div/>')
+              .text(item)
+              .appendTo($('#ids'));
+          });
+        });
+
+        $('#btnCheck').click(function() {
+          var id = $('[name="id"]').val();
+
+          if (!id) {
+            alert('请输入身份证号');
+            return;
+          }
+
+          if (chinaIDCard.check(id)) {
+            var info = chinaIDCard.info(id);
+
+            $('#result')
+              .css('color', 'green')
+              .text('√ 校验通过，当前身份证地址为：' + info);
+          } else {
+            $('#result')
+              .css('color', 'red')
+              .text('× 校验不通过');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

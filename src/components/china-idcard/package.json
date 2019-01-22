@@ -1,0 +1,31 @@
+{
+  "name": "china-idcard",
+  "version": "1.0.0",
+  "description": "第二代身份证生成与校验器",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "start": "browser-sync start --server \"test\" --files \"test\"",
+    "preset": "cross-env FUNC=ChinaIDCard rollup -c",
+    "watch": "cross-env FUNC=ChinaIDCard rollup -c -w",
+    "build": "npm run clean && cross-env NODE_ENV=production npm run preset",
+    "dev": "npm-run-all --parallel start watch"
+  },
+  "author": "Pwcong <pwcong@foxmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "rollup": "^1.1.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.5",
+    "cross-env": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3"
+  }
+}

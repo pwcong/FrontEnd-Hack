@@ -51,6 +51,7 @@
 |CSS Var                    |CSS变量             |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/css-var)                |
 |Browser Checker            |浏览器检测                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/browser-checker)  |
 |Validator                  |前端常用校验器集合         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/validator)        |
+|China IDCard               |第二代身份证生成与校验器   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/china-idcard)        |
 |...                        |...                       |...                                                                               |
 
 

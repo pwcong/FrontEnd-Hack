@@ -257,13 +257,13 @@
         "title": "ICBC星座卡展示（微信端）",
         "intro": "纵向翻页，播放视频",
         "tags": ["swiper", "video.js"],
-        "url": "websites/icbc-constellation-card"
+        "url": "websites/icbc-constellation-card/dist"
       },
       {
         "title": "腾讯云官网",
         "intro": "Vue多组件构建，效果酷炫",
         "tags": ["vue", "webpack"],
-        "url": "websites/qcloud"
+        "url": "websites/qcloud/dist"
       }
     ]
   }

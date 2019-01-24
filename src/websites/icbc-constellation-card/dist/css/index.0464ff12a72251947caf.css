@@ -1,0 +1,134 @@
+
+.video-controller {
+  position: relative;
+  overflow: hidden;
+}
+.video-controller video {
+  max-width: 100%;
+  min-width: 100%;
+}
+.video-controller-action {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 99%;
+
+  position: absolute;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+
+  transition: opacity 0.3s;
+}
+.video-controller-action img {
+  width: 48px;
+  height: 48px;
+  opacity: 1;
+}
+.video-controller-action-on {
+  opacity: 0;
+}
+
+
+.flipper {
+  text-align: center;
+}
+.flipper span {
+  position: relative;
+  top: 16px;
+  opacity: 1;
+
+  animation: anim-up 1.6s infinite;
+}
+@keyframes anim-up {
+from {
+    top: 16px;
+    opacity: 1;
+}
+to {
+    top: -16px;
+    opacity: 0;
+}
+}
+
+
+html,
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.my-swiper-container {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+.swiper-wrapper-detail {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.swiper-wrapper-detail section {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.my-swiper-container-horizontal {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  background: #aaa;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+.tips {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -999;
+  visibility: visible;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips div {
+  background-color: white;
+  padding: 48px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1000px) {
+.my-swiper-container {
+    visibility: visible;
+}
+.tips {
+    visibility: hidden;
+}
+}
+
+
+/*# sourceMappingURL=index.0464ff12a72251947caf.css.map*/

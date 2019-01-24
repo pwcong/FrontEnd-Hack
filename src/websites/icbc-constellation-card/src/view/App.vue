@@ -1,26 +1,28 @@
 <template>
-    <div class="container">
-        <div class="tips">
-            <div>手机浏览效果更佳</div>
-        </div>
-        <swiper :options="swiperOption" class="my-swiper-container">
-            <swiper-slide >
-                <div class="swiper-wrapper-detail">
-                    <section>
-                        <video-player 
-                            :src="firstVideoURL"
-                            :loop="true"
-                            :style="{
+  <div class="container">
+    <div class="tips">
+      <div>手机浏览效果更佳</div>
+    </div>
+    <swiper
+      :options="swiperOption"
+      class="my-swiper-container"
+    >
+      <swiper-slide>
+        <div class="swiper-wrapper-detail">
+          <section>
+            <video-player
+              :src="firstVideoURL"
+              :loop="true"
+              :style="{
                                 width: '100%'
-                            }"/>
-                    </section>
-                    <section
-                        :style="{
+                            }"
+            />
+          </section>
+          <section :style="{
                             flex: 1
                         }">
 
-                        <div
-                            :style="{
+            <div :style="{
                                 width: '100%',
                                 display: 'flex',
                                 justifyContent: 'center',
@@ -28,282 +30,281 @@
                                 flexFlow: 'row wrap'
                             }">
 
-                            <h2>
-                                工银Visa宇宙星座卡
-                            </h2>
+              <h2>
+                工银Visa宇宙星座卡
+              </h2>
 
-                            <div
-                                :style="{
+              <div :style="{
                                     width: '80%',
                                     borderBottom: '2px solid #aaa'
                                 }">
 
-                            </div>
+              </div>
 
-                            <div
-                                :style="{
+              <div :style="{
                                     width: '100%',
                                     textAlign: 'center',
                                     fontSize: '15px'
                                 }">
 
-                                <p>免有效期年费，</p>
-                                <p>专属年轻人的“黑卡”，</p>
-                                <p>正面居然没有卡号，还送网络视频VIP会员，</p>
-                                <p>生日当天消费10倍积分，</p>
-                                <p>境外任意消费0货币转换费，</p>
-                                <p>境外消费，海淘，最高可享21%消费返现，</p>
-                                <p>免费境外WIFI</p>
-                            </div>
+                <p>免有效期年费，</p>
+                <p>专属年轻人的“黑卡”，</p>
+                <p>正面居然没有卡号，还送网络视频VIP会员，</p>
+                <p>生日当天消费10倍积分，</p>
+                <p>境外任意消费0货币转换费，</p>
+                <p>境外消费，海淘，最高可享21%消费返现，</p>
+                <p>免费境外WIFI</p>
+              </div>
 
-                        </div>
+            </div>
 
-                        <flipper 
-                            :style="{
+            <flipper :style="{
                                 position: 'absolute',
                                 bottom: 0,
                                 left: 0,
                                 width: '100%',
-                            }"/>
+                            }" />
 
-                    </section>
-                </div>
-            </swiper-slide>
-            <swiper-slide >
-                <div class="swiper-wrapper-detail">
-                    <video-player 
-                        :src="secondVideoURL" 
-                        :loop="true"
-                        :style="{
+          </section>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-wrapper-detail">
+          <video-player
+            :src="secondVideoURL"
+            :loop="true"
+            :style="{
                             width: '100%',
                             height: '100%'
-                        }"/>
-                </div>
-            </swiper-slide>
-            <swiper-slide >
-                <div class="swiper-wrapper-detail">
-                    <section
-                        :style="{
+                        }"
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-wrapper-detail">
+          <section :style="{
                             height: '60%',
                             overflow: 'hidden'
                         }">
-                        <swiper
-                            :options="secondSwiperOption" 
-                            class="my-swiper-container-horizontal">
-                            <swiper-slide v-for="bannerImg in bannerImgs" :key="bannerImg">
-                                <img
-                                    :style="{
+            <swiper
+              :options="secondSwiperOption"
+              class="my-swiper-container-horizontal"
+            >
+              <swiper-slide
+                v-for="bannerImg in bannerImgs"
+                :key="bannerImg"
+              >
+                <img
+                  :style="{
                                         minWidth: '100%',
                                         maxWidth: '100%',
                                         backgroundRepeat: 'no-repeat',
                                         backgroundSize: 'cover',
                                     }"
-                                    :src="bannerImg"/>
-                            </swiper-slide>
-                            <div class="swiper-pagination" slot="pagination"></div>
-                        </swiper>
-                    </section>
-                    <section
-                        :style="{
+                  :src="bannerImg"
+                />
+              </swiper-slide>
+              <div
+                class="swiper-pagination"
+                slot="pagination"
+              ></div>
+            </swiper>
+          </section>
+          <section :style="{
                             flex: 1
                         }">
 
-                        <div>
-                            <p>每一个星座，都与众不同，</p>
-                            <p>每一个梦想，都独一无二。</p>
-                        </div>
+            <div>
+              <p>每一个星座，都与众不同，</p>
+              <p>每一个梦想，都独一无二。</p>
+            </div>
 
-                        <flipper 
-                            :style="{
+            <flipper :style="{
                                 position: 'absolute',
                                 bottom: 0,
                                 left: 0,
                                 width: '100%',
-                            }"/>
-                    </section>
-                </div>
-            </swiper-slide>
-            <swiper-slide >
-                <div class="swiper-wrapper-detail">
-                    <section
-                        :style="{
+                            }" />
+          </section>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="swiper-wrapper-detail">
+          <section :style="{
                             height: '60%',
                             overflow: 'hidden'
                         }">
-                        <img
-                            :style="{
+            <img
+              :style="{
                                 backgroundRepeat: 'norepear',
                                 backgroundSize: 'cover',
                                 minWidth: '100%',
                                 maxWidth: '100%'
-                            }" 
-                            :src="endImg"/>
-                    </section>
+                            }"
+              :src="endImg"
+            />
+          </section>
 
-                    <section
-                        :style="{
+          <section :style="{
                             flex: 1
                         }">
 
-                        <div
-                            :style="{
+            <div :style="{
                                 textAlign: 'center',
 
                             }">
-                            <p><strong>关注工银行卡公众号，</strong></p>
-                            <p><strong>网上办卡轻松搞定</strong></p>
+              <p><strong>关注工银行卡公众号，</strong></p>
+              <p><strong>网上办卡轻松搞定</strong></p>
 
-                            <button
-                                :style="{
+              <button :style="{
                                     outline: 'none',
                                     marginTop: '8px',
                                     border: 'none',
                                     padding: '8px',
                                     backgroundColor: '#ccc'
                                 }">
-                                进入公众号在线办卡
-                            </button>
+                进入公众号在线办卡
+              </button>
 
-                        </div>
+            </div>
 
-                    </section>
+          </section>
 
-                </div>
-            </swiper-slide>
+        </div>
+      </swiper-slide>
 
-        </swiper>
-    </div>
+    </swiper>
+  </div>
 </template>
 
 
 <style>
-
-.container{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+html,
+body {
+  font-family: "Microsoft YaHei", sans-serif;
 }
 
-.my-swiper-container{
-    height: 100%;
-    width: 100%;
-    visibility: hidden;
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
-
-.swiper-wrapper-detail{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
+.my-swiper-container {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
 }
 
-.swiper-wrapper-detail section{
-    position: relative;
-
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.swiper-wrapper-detail {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.my-swiper-container-horizontal{
-    height: 100%;
-    width: 100%;
-    
-    position: relative;
-}
-.swiper-pagination .swiper-pagination-bullet{
-    background: #aaa;
+.swiper-wrapper-detail section {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.swiper-pagination .swiper-pagination-bullet-active{
-    background: white;
+.my-swiper-container-horizontal {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  background: #aaa;
 }
 
-.tips{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -999;
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.tips {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -999;
+  visibility: visible;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips div {
+  background-color: white;
+  padding: 48px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1000px) {
+  .my-swiper-container {
     visibility: visible;
+  }
 
-    width: 100%;
-    height: 100%;
-
-    background-color: #333;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  .tips {
+    visibility: hidden;
+  }
 }
-
-.tips div{
-
-    
-    background-color: white;
-    padding: 48px;
-    border-radius: 4px;
-
-}
-
-@media screen and (max-width: 1000px){
-    .my-swiper-container{
-        visibility: visible;
-    }
-
-    .tips{
-        visibility: hidden;
-    }
-}
-
 </style>
 <script>
-
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
 import VideoPlayer from "../component/VideoPlayer.vue";
 import Flipper from "../component/Flipper.vue";
 
+import show_1 from "../assets/imgs/show_1.jpg";
+import show_2 from "../assets/imgs/show_2.jpg";
+import show_3 from "../assets/imgs/show_3.jpg";
+import show_4 from "../assets/imgs/show_4.jpg";
+import show_5 from "../assets/imgs/show_5.jpg";
+import end from "../assets/imgs/end.jpg";
+
+import mp4_1 from "../assets/files/1.mp4";
+import mp4_2 from "../assets/files/2.mp4";
+
 export default {
-
-    data() {
-        return {
-            swiperOption: {
-                direction: 'vertical'
-            },
-            secondSwiperOption: {
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
-                autoplay: 3000
-            },
-            firstVideoURL: './files/1.mp4',
-            secondVideoURL: './files/2.mp4',
-            bannerImgs: [
-                './imgs/show_1.jpg',
-                './imgs/show_2.jpg',
-                './imgs/show_3.jpg',
-                './imgs/show_4.jpg',
-                './imgs/show_5.jpg'
-            ],
-            endImg: './imgs/end.jpg'
-        };
-    },
-    computed: {
-        swiper(){
-            return this.$refs.horizontalSwiper.swiper;
-        }
-    },
-    components: {
-        swiper,
-        swiperSlide,
-        VideoPlayer,
-        Flipper
+  data() {
+    return {
+      swiperOption: {
+        direction: "vertical"
+      },
+      secondSwiperOption: {
+        pagination: ".swiper-pagination",
+        paginationClickable: true,
+        autoplay: 3000
+      },
+      firstVideoURL: mp4_1,
+      secondVideoURL: mp4_2,
+      bannerImgs: [show_1, show_2, show_3, show_4, show_5],
+      endImg: end
+    };
+  },
+  computed: {
+    swiper() {
+      return this.$refs.horizontalSwiper.swiper;
     }
-
-
-}
+  },
+  components: {
+    swiper,
+    swiperSlide,
+    VideoPlayer,
+    Flipper
+  }
+};
 </script>

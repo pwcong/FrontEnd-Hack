@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fix Top</title>
+  <style>
+    html, body {
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top,
+    .left,
+    #target {
+      background-color: white;
+      box-shadow: 0 1px 4px #d4d4d4;
+    }
+
+    .top {
+      height: 120px;
+    }
+
+    .bottom {
+      margin: 0 auto;
+      margin-top: 20px;
+      max-width: 900px;
+      display: flex;
+    }
+
+    .left {
+      flex: 1;
+      height: 2000px;
+    }
+
+    .right {
+      margin-left: 16px;
+      width: 350px;
+    }
+
+    #target {
+      position: static;
+      top: auto;
+      height: 300px;
+      width: 350px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="top"></div>
+    <div class="bottom">
+
+      <div class="left"></div>
+      <div class="right">
+        <div id="target"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../public/js/jquery.min.js"></script>
+  <script>
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop > 140) {
+        $('#target').css('position', 'fixed').css('top', '0');
+      } else {
+        $('#target').css('position', 'static').css('top', 'auto');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -247,6 +247,12 @@
         "intro": "China IDCard v2",
         "tags": ["china", "idcard"],
         "url": "components/china-idcard"
+      },
+      {
+        "title": "Fix Top",
+        "intro": "元素滑动至定点高固定",
+        "tags": ["fix-top"],
+        "url": "components/fix-top"
       }
     ]
   },

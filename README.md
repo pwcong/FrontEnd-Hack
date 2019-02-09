@@ -52,6 +52,7 @@
 |Browser Checker            |浏览器检测                 |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/browser-checker)  |
 |Validator                  |前端常用校验器集合         |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/validator)        |
 |China IDCard               |第二代身份证生成与校验器   |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/china-idcard)        |
+|Fix Top                    |元素滑动至定点高固定     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/fix-top)             |
 |...                        |...                       |...                                                                               |
 
 

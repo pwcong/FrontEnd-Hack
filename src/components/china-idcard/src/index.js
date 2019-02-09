@@ -151,7 +151,7 @@ export default class ChinaIDCard {
 
   check(id) {
     let l = id.length;
-    if (l < 18) {
+    if (l != 18) {
       return false;
     }
 
